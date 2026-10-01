@@ -78,8 +78,14 @@ npm install
 npm run dev
 ```
 
-На **GitHub Pages** сайт публикуется сам: при пуше в `main` workflow
-`.github/workflows/pages.yml` отдаёт содержимое `public/`.
+На **GitHub Pages** сайт отдаётся из ветки `gh-pages`. При пуше в `main` workflow
+`.github/workflows/pages.yml` переносит туда содержимое `public/`.
+
+Если автоматика почему-то не сработала, ветку можно обновить вручную:
+
+```bash
+git subtree push --prefix public origin gh-pages
+```
 
 Все ссылки внутри страницы относительные — поэтому сайт одинаково работает и в корне домена,
 и по адресу вида `user.github.io/имя-репозитория/`.
