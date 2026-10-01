@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ai-creator-site",
+  "compatibility_date": "2026-08-01",
+
+  // Сайт — одна страница со статикой, кода на сервере нет.
+  "assets": { "directory": "./public" },
+
+  "observability": { "enabled": true }
+}

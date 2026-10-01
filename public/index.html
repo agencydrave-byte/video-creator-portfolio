@@ -1,0 +1,755 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Danylo Korobko — AI creator and video editor</title>
+<meta name="description" content="I cut short-form video for Instagram Reels and TikTok, and I build video with AI — script and prompts in Claude Code, picture in Higgsfield, finished by hand.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0c0e'/%3E%3Cpath d='M12 9l12 7-12 7z' fill='%23e8ebee'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════ ТОКЕНЫ ═══════════ */
+:root{
+  --bg:#0a0c0e;
+  --panel:#101316;
+  --panel-2:#161a1e;
+  --panel-3:#1d2227;
+  --line:rgba(255,255,255,0.11);
+  --line-soft:rgba(255,255,255,0.06);
+  --ink:#ffffff;
+  --ink-soft:#a3abb4;
+  --ink-dim:#858d97;
+  --chip:#e8ebee;
+  --font-display:"Unbounded","Trebuchet MS",sans-serif;
+  --font-body:"Golos Text","Segoe UI",system-ui,sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:0.25rem}
+::selection{background:var(--chip);color:var(--bg)}
+.hidden{display:none!important}
+
+.wrap{max-width:82rem;margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
+
+/* ═══════════ КНОПКИ-ПИЛЮЛИ ═══════════ */
+.pills{
+  display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;
+  padding:clamp(1rem,3vw,1.75rem) 0;
+}
+@media (min-width:820px){.pills{justify-content:space-between;flex-wrap:nowrap}}
+.pill{
+  display:inline-flex;align-items:center;gap:0.6rem;
+  padding:0.4rem 1.1rem 0.4rem 0.4rem;
+  border:1px solid var(--line);border-radius:62.5rem;
+  background:var(--panel);
+  font-size:0.8125rem;font-weight:500;color:var(--ink);
+  transition:border-color .3s ease,background .3s ease,transform .3s ease;
+}
+.pill:hover{border-color:rgba(255,255,255,0.35);background:var(--panel-2);transform:translateY(-2px)}
+.pill-ic{
+  flex:none;width:1.6rem;height:1.6rem;border-radius:50%;
+  background:var(--chip);color:var(--bg);
+  display:grid;place-items:center;
+}
+.pill-ic svg{width:0.85rem;height:0.85rem}
+
+/* ═══════════ HERO ═══════════ */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(58% 52% at 50% 40%,rgba(255,255,255,0.055),transparent 72%),
+    var(--bg);
+}
+.hero-stage{
+  position:relative;
+  display:grid;grid-template-columns:1fr;gap:1.5rem;
+  align-items:center;justify-items:center;
+  padding-bottom:clamp(1rem,3vw,2rem);
+}
+@media (min-width:900px){
+  .hero-stage{grid-template-columns:1fr auto 1fr;gap:clamp(1rem,3vw,2.5rem);justify-items:stretch}
+}
+.rule{display:block;width:6.5rem;height:1px;background:var(--line);margin-bottom:1.1rem}
+.hero-role{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.05rem,2.1vw,1.4rem);
+  line-height:1.35;letter-spacing:-0.01em;
+  text-align:center;
+}
+.hero-note{
+  font-size:0.8125rem;line-height:1.75;color:var(--ink-soft);
+  max-width:24em;text-align:center;
+}
+@media (min-width:900px){
+  .hero-role{text-align:left}
+  .hero-note{text-align:justify;margin-left:auto}
+}
+
+.hero-figure{
+  position:relative;z-index:1;
+  width:min(80vw,22rem);
+  order:-1;
+}
+@media (min-width:900px){.hero-figure{order:0;width:min(34vw,25rem)}}
+.hero-figure img{
+  width:100%;height:auto;
+  -webkit-mask-image:linear-gradient(180deg,#000 78%,transparent 100%);
+          mask-image:linear-gradient(180deg,#000 78%,transparent 100%);
+  opacity:0;transform:translateY(1.25rem);
+  transition:opacity 1.1s ease,transform 1.1s ease;
+}
+.ready .hero-figure img{opacity:1;transform:none}
+
+.hero-name{
+  position:absolute;left:50%;bottom:clamp(2.5rem,7vw,5rem);
+  transform:translateX(-50%);
+  z-index:2;text-align:center;pointer-events:none;white-space:nowrap;
+}
+.hero-name-sm{
+  display:block;
+  font-size:clamp(0.625rem,1.3vw,0.8125rem);
+  letter-spacing:0.5em;text-indent:0.5em;
+  color:var(--ink-soft);margin-bottom:0.35rem;
+}
+.hero-name-lg{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(3.2rem,11vw,8rem);
+  line-height:0.9;letter-spacing:-0.03em;
+  color:var(--ink);
+  text-shadow:0 0.5rem 2.5rem rgba(0,0,0,0.55);
+}
+
+.hero-tools{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:clamp(1rem,4vw,2.75rem);
+  padding:clamp(1rem,3vw,1.75rem) 0 clamp(2rem,6vw,4rem);
+}
+.hero-tools span{
+  font-size:0.8125rem;font-weight:500;letter-spacing:0.02em;
+  color:var(--ink-dim);
+  transition:color .3s ease;
+}
+.hero-tools span:hover{color:var(--ink-soft)}
+
+/* ═══════════ ОБЩИЕ СЕКЦИИ ═══════════ */
+.sec{padding:clamp(3rem,8vw,5.5rem) 0}
+.sec--panel{background:var(--panel);border-top:1px solid var(--line-soft)}
+.h2{
+  font-family:var(--font-display);font-weight:400;
+  font-size:clamp(1.4rem,3.4vw,2.35rem);
+  line-height:1.25;letter-spacing:-0.02em;text-wrap:balance;
+  max-width:20em;
+}
+.lead{
+  color:var(--ink-soft);max-width:52em;margin-top:1.25rem;
+  font-size:0.8125rem;line-height:1.8;
+}
+
+/* ═══════════ ОБО МНЕ ═══════════ */
+.about-grid{display:grid;gap:clamp(2rem,5vw,3.5rem);grid-template-columns:1fr;align-items:center;margin-top:clamp(1.5rem,4vw,2.25rem)}
+@media (min-width:920px){.about-grid{grid-template-columns:1.35fr 1fr}}
+.bio p{color:var(--ink-soft);font-size:0.875rem;line-height:1.85;margin-top:1rem;max-width:38em}
+.bio p:first-child{margin-top:0}
+.bio p b{color:var(--ink);font-weight:500}
+
+.vcard{
+  border:1px solid var(--line);border-radius:0.5rem;
+  background:var(--panel-2);padding:clamp(1.25rem,3vw,1.75rem);
+}
+.vcard-name{font-family:var(--font-display);font-weight:500;font-size:1.25rem;line-height:1.2}
+.vcard-role{font-size:0.75rem;color:var(--ink-soft);margin-top:0.4rem}
+.vcard-list{list-style:none;margin-top:1.5rem;border-top:1px solid var(--line-soft)}
+.vcard-list li{
+  display:flex;justify-content:space-between;gap:1rem;align-items:baseline;
+  padding:0.75rem 0;border-bottom:1px solid var(--line-soft);
+  font-size:0.8125rem;
+}
+.vcard-k{color:var(--ink-dim);letter-spacing:0.04em}
+.vcard-v{color:var(--ink);text-align:right}
+.vcard-sub{
+  margin-top:1.5rem;
+  font-size:0.6875rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--ink-dim);
+}
+.vcard-list--tight{margin-top:0.6rem}
+.vcard-free{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  margin-top:1.25rem;font-size:0.8125rem;color:var(--ink);
+}
+.vcard-free i{
+  width:0.5rem;height:0.5rem;border-radius:50%;background:var(--chip);
+  box-shadow:0 0 0 0.25rem rgba(232,235,238,0.16);
+}
+
+.head-row{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:1rem}
+
+/* ═══════════ ФИЛЬТР РАБОТ ═══════════ */
+.filter{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:clamp(1.25rem,3vw,1.75rem)}
+.fbtn{
+  border:1px solid var(--line);border-radius:62.5rem;background:transparent;
+  color:var(--ink-soft);font-family:var(--font-body);
+  font-size:0.75rem;font-weight:500;letter-spacing:0.02em;
+  padding:0.4rem 0.95rem;cursor:pointer;
+  transition:border-color .3s ease,background .3s ease,color .3s ease;
+}
+.fbtn:hover{border-color:rgba(255,255,255,0.3);color:var(--ink)}
+.fbtn[aria-pressed="true"]{background:var(--chip);border-color:var(--chip);color:var(--bg)}
+.fbtn i{font-style:normal;opacity:0.55;margin-left:0.35rem;font-variant-numeric:tabular-nums}
+
+/* ═══════════ РАБОТЫ ═══════════ */
+.works{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:clamp(1.5rem,4vw,2.25rem)}
+@media (min-width:700px){.works{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1100px){.works{grid-template-columns:repeat(3,1fr)}}
+.work{
+  cursor:pointer;text-align:left;
+  display:flex;flex-direction:column;gap:1rem;
+  border:1px solid var(--line);border-radius:0.4rem;
+  background:var(--panel-2);padding:1.1rem;
+  font-family:inherit;color:inherit;
+  transition:border-color .3s ease,background .3s ease,transform .3s ease;
+}
+.work:hover{border-color:rgba(255,255,255,0.3);background:var(--panel-3);transform:translateY(-3px)}
+.work-head{display:flex;gap:0.8rem;align-items:flex-start}
+.work-head > div{flex:1}
+.work-go{
+  flex:none;width:1.6rem;height:1.6rem;border-radius:50%;
+  border:1px solid var(--line);display:grid;place-items:center;
+  color:var(--ink-soft);
+  transition:background .3s ease,color .3s ease,border-color .3s ease,transform .3s ease;
+}
+.work-go svg{width:0.8rem;height:0.8rem}
+.work:hover .work-go{background:var(--chip);color:var(--bg);border-color:var(--chip);transform:scale(1.05)}
+.work-num{font-family:var(--font-display);font-size:0.75rem;font-weight:500;color:var(--ink-dim);padding-top:0.2rem;font-variant-numeric:tabular-nums}
+
+/* подпись между разделами списка: видно, где кончается одно и начинается другое */
+.split{
+  grid-column:1/-1;
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:0.4rem 1rem;
+  padding:clamp(1.25rem,3vw,2rem) 0 0.35rem;
+  border-top:1px solid var(--line-soft);
+  margin-top:clamp(0.5rem,2vw,1.25rem);
+}
+.works > .split:first-child{border-top:0;margin-top:0;padding-top:0}
+.split b{
+  font-family:var(--font-display);font-weight:500;
+  font-size:0.8125rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--ink);
+}
+.split span{font-size:0.75rem;color:var(--ink-dim)}
+.work-name{font-size:0.9375rem;font-weight:600;line-height:1.3}
+.work-kind{font-size:0.75rem;color:var(--ink-dim);margin-top:0.15rem}
+.work-brief{
+  font-size:0.75rem;line-height:1.7;color:var(--ink-soft);
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+}
+
+/* ─── превью работы ───
+   В карточке у всех работ один кадр 4/5 (object-fit:cover), иначе вертикальные
+   и горизонтальные ролики дают сетку с дырами. Полный формат — в окне просмотра. */
+.thumb{
+  position:relative;overflow:hidden;
+  background:var(--bg);border:1px solid var(--line-soft);border-radius:0.25rem;
+  aspect-ratio:4/5;
+}
+.thumb video,.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb-play{
+  position:absolute;right:0.6rem;bottom:0.6rem;z-index:2;
+  width:1.9rem;height:1.9rem;border-radius:50%;
+  background:rgba(10,12,14,0.72);border:1px solid var(--line);
+  display:grid;place-items:center;color:var(--chip);
+  transition:background .3s ease,color .3s ease,border-color .3s ease;
+}
+.thumb-play svg{width:0.7rem;height:0.7rem;margin-left:0.1rem}
+.work:hover .thumb-play{background:var(--chip);color:var(--bg);border-color:var(--chip)}
+/* заглушка, пока видео не подставлено */
+.thumb--empty{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.55rem;
+  background:
+    radial-gradient(120% 90% at 50% 0%,rgba(255,255,255,0.05),transparent 70%),
+    var(--bg);
+}
+.thumb--empty b{font-family:var(--font-display);font-weight:500;font-size:1.5rem;line-height:1;color:var(--panel-3)}
+.thumb--empty span{font-size:0.625rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-dim)}
+.thumb--empty i{width:2.6rem;height:1px;background:var(--line)}
+
+.tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:auto}
+.tag{font-size:0.6875rem;color:var(--ink-dim);border:1px solid var(--line);border-radius:62.5rem;padding:0.22rem 0.6rem}
+
+/* ═══════════ ОКНО ПРОСМОТРА ═══════════ */
+.view{
+  position:fixed;inset:0;z-index:50;
+  display:flex;align-items:flex-start;justify-content:center;
+  padding:clamp(0.75rem,3vw,2.5rem);
+  background:rgba(5,6,7,0.86);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  overflow-y:auto;overscroll-behavior:contain;
+}
+.view-box{
+  position:relative;width:100%;max-width:72rem;margin:auto;
+  border:1px solid var(--line);border-radius:0.6rem;
+  background:var(--panel);
+  padding:clamp(1.1rem,3vw,2rem);
+}
+.view-close{
+  position:absolute;right:clamp(0.6rem,2vw,1rem);top:clamp(0.6rem,2vw,1rem);z-index:3;
+  width:2.1rem;height:2.1rem;border-radius:50%;
+  border:1px solid var(--line);background:var(--panel-2);
+  color:var(--ink);display:grid;place-items:center;cursor:pointer;
+  transition:background .3s ease,color .3s ease,border-color .3s ease;
+}
+.view-close:hover{background:var(--chip);color:var(--bg);border-color:var(--chip)}
+.view-close svg{width:0.85rem;height:0.85rem}
+.view-grid{display:grid;gap:clamp(1.25rem,3vw,2rem);grid-template-columns:1fr;align-items:start}
+@media (min-width:900px){.view-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+/* Рамка плеера. Видео само задаёт свой размер (max-width/max-height), иначе
+   aspect-ratio вместе с width:auto схлопывает элемент в нулевую ширину
+   и кнопок плеера попросту не видно. */
+.stage{
+  position:relative;overflow:hidden;
+  background:#000;border:1px solid var(--line);border-radius:0.4rem;
+  display:flex;align-items:center;justify-content:center;
+  width:fit-content;max-width:100%;margin:0 auto;
+}
+.stage video{
+  display:block;width:auto;height:auto;
+  max-width:100%;max-height:min(78vh,42rem);
+  background:#000;
+}
+.stage--wide video{max-height:min(60vh,28rem)}
+/* встроенный проигрыватель (YouTube/Vimeo) размера не знает — задаём кадр сами */
+.stage--embed{aspect-ratio:16/9;width:100%}
+.stage--embed.stage--vert{aspect-ratio:9/16;max-width:min(22rem,100%);margin:0 auto}
+.stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.stage--empty{
+  flex-direction:column;gap:0.75rem;
+  aspect-ratio:9/16;max-width:min(22rem,100%);margin:0 auto;
+  background:
+    radial-gradient(120% 90% at 50% 0%,rgba(255,255,255,0.05),transparent 70%),
+    var(--bg);
+}
+.stage--empty.stage--wide{aspect-ratio:16/9;max-width:100%}
+.stage--empty b{font-family:var(--font-display);font-weight:500;font-size:2.25rem;line-height:1;color:var(--panel-3)}
+.stage--empty span{font-size:0.6875rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-dim)}
+.stage--empty i{width:3.5rem;height:1px;background:var(--line)}
+.eyebrow{font-size:0.6875rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ink-dim)}
+.view-title{
+  font-family:var(--font-display);font-weight:500;
+  font-size:clamp(1.3rem,3.2vw,1.9rem);
+  line-height:1.2;letter-spacing:-0.03em;margin-top:0.5rem;
+}
+.view-sub{font-size:0.8125rem;color:var(--ink-dim);margin-top:0.35rem}
+.view-brief{color:var(--ink-soft);font-size:0.875rem;line-height:1.85;margin-top:1.1rem}
+.view-head{font-size:0.6875rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-dim);margin-top:1.6rem}
+.skills{list-style:none;margin-top:0.85rem;display:grid;gap:0.5rem}
+.skills li{position:relative;padding-left:1rem;font-size:0.8125rem;line-height:1.7;color:var(--ink-soft)}
+.skills li::before{content:"";position:absolute;left:0;top:0.65em;width:0.3rem;height:1px;background:var(--ink-dim)}
+.view-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.25rem}
+
+/* ═══════════ КОНТАКТ ═══════════ */
+.contact{text-align:center}
+.contact .h2{margin:0 auto;max-width:16em}
+.contact .lead{margin-left:auto;margin-right:auto;text-align:center}
+.contact .rule{margin-left:auto;margin-right:auto}
+.social{
+  display:inline-flex;flex-wrap:wrap;justify-content:center;gap:clamp(1rem,4vw,2.25rem);
+  margin-top:clamp(1.75rem,4vw,2.5rem);
+  padding:1rem clamp(1.25rem,4vw,2.25rem);
+  border:1px solid var(--line);border-radius:0.75rem;background:var(--panel-2);
+}
+.social a{display:flex;flex-direction:column;align-items:center;gap:0.5rem;color:var(--ink);transition:transform .3s ease,color .3s ease}
+.social a:hover{transform:translateY(-3px);color:var(--ink)}
+.social svg{width:1.35rem;height:1.35rem}
+.social span{font-size:0.8125rem;letter-spacing:0.01em;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+.foot{
+  border-top:1px solid var(--line-soft);margin-top:clamp(2.5rem,6vw,4rem);padding-top:1.5rem;
+  display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:space-between;
+  font-size:0.6875rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-dim);
+}
+
+/* ═══════════ ПОЯВЛЕНИЕ ═══════════ */
+.rise{opacity:0;transform:translateY(1.5rem);transition:opacity .7s ease,transform .7s ease}
+.rise.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .rise,.hero-figure img{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="top">
+  <div class="wrap">
+
+    <nav class="pills">
+      <a class="pill" href="#work">
+        <span class="pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
+        My work
+      </a>
+      <a class="pill" href="#about">
+        <span class="pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4-5.4 7-5.4s5.6 1.8 7 5.4"/></svg></span>
+        About me
+      </a>
+      <a class="pill" href="https://t.me/danylo_mf" target="_blank" rel="noopener">
+        <span class="pill-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+        Message me
+      </a>
+    </nav>
+
+    <div class="hero-stage">
+      <div>
+        <span class="rule"></span>
+        <p class="hero-role">I cut video<br>and make it with AI</p>
+      </div>
+
+      <div class="hero-figure">
+        <img src="media/portrait-gray.webp" width="702" height="1280" alt="Danylo Korobko" decoding="async">
+      </div>
+
+      <p class="hero-note">
+        Hi, I am Danylo. I edit short-form video &mdash; Instagram Reels and TikTok &mdash;
+        and I build video that was never filmed: the script and the prompts in Claude Code,
+        the picture in Higgsfield, then cut and finished by hand.
+      </p>
+
+      <div class="hero-name">
+        <span class="hero-name-sm">KOROBKO</span>
+        <p class="hero-name-lg">Danylo</p>
+      </div>
+    </div>
+
+    <div class="hero-tools">
+      <span>Instagram Reels</span>
+      <span>TikTok</span>
+      <span>Higgsfield</span>
+      <span>Claude Code</span>
+      <span>Prompting</span>
+      <span>Storyboards</span>
+      <span>Sound</span>
+      <span>Color</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ ОБО МНЕ ══════════ -->
+<section class="sec sec--panel" id="about">
+  <div class="wrap rise">
+    <span class="rule"></span>
+    <h2 class="h2">About me</h2>
+
+    <div class="about-grid">
+      <div class="bio">
+        <p>
+          My name is <b>Danylo Korobko</b>. I am from Ukraine and I live in <b>Prague</b>,
+          where I am in my <b>final year of an IT degree</b>. I work remotely, with clients
+          in any country.
+        </p>
+        <p>
+          <b>A year of freelance</b> behind me, most of it short-form: I cut vertical video
+          for <b>Instagram Reels and TikTok</b> &mdash; the hook in the first seconds, cuts on
+          the beat, captions you can actually read on a phone, sound that does not fight the voice.
+        </p>
+        <p>
+          I went into this because I believe <b>the future belongs to AI</b>, and working with
+          it is genuinely interesting. So half of what I do now is video that was never filmed:
+          in <b>Claude Code</b> I write the script, the shot list and the prompts, in
+          <b>Higgsfield</b> I generate the images and the motion, and then I edit the result
+          like ordinary footage &mdash; pacing, sound, titles, grade.
+        </p>
+        <p>
+          I run a project on my own, from the first message to the finished file, so you talk
+          to one person instead of a department &mdash; and you get the cut back while it is
+          still worth posting.
+        </p>
+      </div>
+
+      <aside class="vcard">
+        <p class="vcard-name">Danylo Korobko</p>
+        <p class="vcard-role">AI creator &amp; video editor</p>
+        <ul class="vcard-list">
+          <li><span class="vcard-k">City</span><span class="vcard-v">Prague, Czechia</span></li>
+          <li><span class="vcard-k">Format</span><span class="vcard-v">remote</span></li>
+          <li><span class="vcard-k">Studies</span><span class="vcard-v">IT, final year</span></li>
+          <li><span class="vcard-k">Experience</span><span class="vcard-v">1 year freelance</span></li>
+        </ul>
+
+        <p class="vcard-sub">Languages</p>
+        <ul class="vcard-list vcard-list--tight">
+          <li><span class="vcard-k">Ukrainian</span><span class="vcard-v">native</span></li>
+          <li><span class="vcard-k">Russian</span><span class="vcard-v">native</span></li>
+          <li><span class="vcard-k">Czech</span><span class="vcard-v">C1</span></li>
+          <li><span class="vcard-k">English</span><span class="vcard-v">B1</span></li>
+        </ul>
+
+        <p class="vcard-free"><i></i> Open for new projects</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ РАБОТЫ ══════════ -->
+<section class="sec" id="work">
+  <div class="wrap rise">
+    <span class="rule"></span>
+    <h2 class="h2">My work</h2>
+    <p class="lead">
+      Two kinds of job. <b>Editing</b> &mdash; raw footage in, a vertical cut out, ready for Reels
+      or TikTok. <b>AI-generated</b> &mdash; nothing was filmed at all: the script and the prompts
+      are written in Claude Code, the picture comes out of Higgsfield, and the edit is still done
+      by hand. Pick a tab, then open a card to watch it.
+    </p>
+
+    <div class="filter" id="filter" role="group" aria-label="Filter work"></div>
+    <div class="works" id="worksGrid"></div>
+  </div>
+</section>
+
+<!-- ══════════ КОНТАКТ ══════════ -->
+<section class="sec sec--panel" id="contact">
+  <div class="wrap rise contact">
+    <span class="rule"></span>
+    <h2 class="h2">Say hello</h2>
+    <p class="lead">
+      Tell me what you are posting and where &mdash; I will say how I would cut it, how long
+      it takes and what it costs. Raw footage, a rough idea, or nothing but a product all
+      work as a starting point.
+    </p>
+
+    <div class="social">
+      <a href="https://t.me/danylo_mf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4L3 11l6 2 2 6z"/><path d="M9 13l12-9"/></svg>
+        <span>@danylo_mf</span>
+      </a>
+    </div>
+
+    <div class="foot">
+      <span>&copy; 2026 Danylo Korobko</span>
+      <span>Prague &middot; remote</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ОКНО ПРОСМОТРА РАБОТЫ ══════════ -->
+<div class="view hidden" id="view" role="dialog" aria-modal="true" aria-label="Work">
+  <div class="view-box">
+    <button class="view-close" id="viewClose" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="view-grid" id="viewBody"></div>
+  </div>
+</div>
+
+<script src="works.js"></script>
+<script>
+(function(){
+  var works = window.WORKS || [];
+  var grid   = document.getElementById("worksGrid");
+  var filter = document.getElementById("filter");
+  var view   = document.getElementById("view");
+  var body   = document.getElementById("viewBody");
+  var close  = document.getElementById("viewClose");
+  var still  = window.matchMedia && window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+
+  var ARROW = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>';
+  var PLAY  = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4l12 8-12 8z"/></svg>';
+
+  var KINDS = [
+    { key:"all",  label:"All" },
+    { key:"ai",   label:"AI-generated" },
+    { key:"edit", label:"Editing" }
+  ];
+
+  function kindName(k){ return k === "ai" ? "AI-generated" : "Editing"; }
+  function play(v){ var p = v.play(); if (p && p.catch) p.catch(function(){}); }
+
+  /* подпись перед разделом — показывается, только когда открыты все работы */
+  function split(kind){
+    var t = kind === "ai"
+      ? ["AI-generated", "nothing was filmed — script and prompts in Claude Code, picture in Higgsfield"]
+      : ["Plain editing", "real footage, cut by hand — Reels, TikTok and screen recordings"];
+    return '<div class="split" data-split="' + kind + '">'
+         +   '<b>' + t[0] + '</b><span>' + t[1] + '</span></div>';
+  }
+
+  /* ── превью в карточке ── */
+  function thumb(w){
+    var cls = "thumb";
+    if (w.file){
+      return '<div class="' + cls + '">'
+           +   '<video muted loop playsinline preload="none"'
+           +     (w.poster ? ' poster="' + w.poster + '"' : '')
+           +     ' src="' + w.file + '"></video>'
+           +   '<span class="thumb-play">' + PLAY + '</span></div>';
+    }
+    if (w.poster){
+      return '<div class="' + cls + '">'
+           +   '<img src="' + w.poster + '" alt="" loading="lazy" decoding="async">'
+           +   '<span class="thumb-play">' + PLAY + '</span></div>';
+    }
+    return '<div class="' + cls + ' thumb--empty">'
+         +   '<b>' + w.num + '</b><i></i><span>video soon</span></div>';
+  }
+
+  function card(w, i){
+    var tags = w.tags.map(function(t){ return '<span class="tag">' + t + '</span>'; }).join("");
+    return '<button class="work" type="button" data-i="' + i + '" data-kind="' + w.kind + '">'
+         +   '<div class="work-head">'
+         +     '<span class="work-num">' + w.num + '</span>'
+         +     '<div><h3 class="work-name">' + w.name + '</h3>'
+         +       '<p class="work-kind">' + w.sub + '</p></div>'
+         +     '<span class="work-go">' + ARROW + '</span>'
+         +   '</div>'
+         +   thumb(w)
+         +   '<p class="work-brief">' + w.brief + '</p>'
+         +   '<div class="tags">' + tags + '</div>'
+         + '</button>';
+  }
+
+  /* ── большой плеер в окне просмотра ── */
+  function stage(w){
+    var cls = "stage " + (w.ratio === "16/9" ? "stage--wide" : "stage--vert");
+    if (w.file){
+      return '<div class="' + cls + '">'
+           +   '<video controls playsinline preload="metadata"'
+           +     (w.poster ? ' poster="' + w.poster + '"' : '')
+           +     ' src="' + w.file + '"></video></div>';
+    }
+    if (w.embed){
+      return '<div class="' + cls + ' stage--embed">'
+           +   '<iframe src="' + w.embed + '" title="' + w.name + '" loading="lazy"'
+           +     ' allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"'
+           +     ' allowfullscreen></iframe></div>';
+    }
+    return '<div class="' + cls + ' stage--empty">'
+         +   '<b>' + w.num + '</b><i></i><span>video soon</span></div>';
+  }
+
+  var lastFocus = null;
+
+  function openWork(i){
+    var w = works[i];
+    if (!w) return;
+    var did   = w.did.map(function(d){ return '<li>' + d + '</li>'; }).join("");
+    var tags  = w.tags.map(function(t){ return '<span class="tag">' + t + '</span>'; }).join("");
+
+    body.innerHTML = stage(w)
+      + '<div>'
+      +   '<p class="eyebrow">Work ' + w.num + ' &middot; ' + kindName(w.kind) + '</p>'
+      +   '<h3 class="view-title">' + w.name + '</h3>'
+      +   '<p class="view-sub">' + w.sub + '</p>'
+      +   '<p class="view-brief">' + w.brief + '</p>'
+      +   '<p class="view-head">What I did</p>'
+      +   '<ul class="skills">' + did + '</ul>'
+      +   '<div class="view-tags">' + tags + '</div>'
+      + '</div>';
+
+    lastFocus = document.activeElement;
+    view.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+    close.focus();
+
+    /* сразу запускаем — клик по карточке даёт браузеру право на воспроизведение;
+       если он всё же откажет, останется постер и кнопки плеера */
+    var v = body.querySelector("video");
+    if (v) play(v);
+  }
+
+  function closeWork(){
+    view.classList.add("hidden");
+    body.innerHTML = "";                 /* выгружаем плеер, чтобы видео не грузилось в фоне */
+    document.body.style.overflow = "";
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  /* ── кнопки-вкладки ── */
+  function drawFilter(){
+    filter.innerHTML = KINDS.map(function(k){
+      var n = k.key === "all" ? works.length : works.filter(function(w){ return w.kind === k.key; }).length;
+      return '<button class="fbtn" type="button" data-filter="' + k.key + '"'
+           +   ' aria-pressed="' + (k.key === "all") + '">'
+           +   k.label + '<i>' + n + '</i></button>';
+    }).join("");
+
+    filter.addEventListener("click", function(e){
+      var btn = e.target.closest(".fbtn");
+      if (!btn) return;
+      var key = btn.getAttribute("data-filter");
+      Array.prototype.forEach.call(filter.querySelectorAll(".fbtn"), function(b){
+        b.setAttribute("aria-pressed", String(b === btn));
+      });
+      Array.prototype.forEach.call(grid.querySelectorAll(".work"), function(el){
+        el.classList.toggle("hidden", key !== "all" && el.getAttribute("data-kind") !== key);
+      });
+      /* подписи разделов нужны, только когда в списке оба вида работ */
+      Array.prototype.forEach.call(grid.querySelectorAll(".split"), function(el){
+        el.classList.toggle("hidden", key !== "all");
+      });
+    });
+  }
+
+  /* ── сборка ── */
+  if (grid){
+    var lastKind = null;
+    grid.innerHTML = works.map(function(w, i){
+      var head = "";
+      if (w.kind !== lastKind){ head = split(w.kind); lastKind = w.kind; }
+      return head + card(w, i);
+    }).join("");
+    drawFilter();
+
+    Array.prototype.forEach.call(grid.querySelectorAll(".work"), function(el){
+      el.addEventListener("click", function(){ openWork(Number(el.getAttribute("data-i"))); });
+
+      var v = el.querySelector("video");
+      if (!v || still) return;
+      el.addEventListener("mouseenter", function(){ play(v); });
+      el.addEventListener("focus",      function(){ play(v); });
+      el.addEventListener("mouseleave", function(){ v.pause(); v.currentTime = 0; });
+      el.addEventListener("blur",       function(){ v.pause(); v.currentTime = 0; });
+    });
+
+    /* на тач-экране курсора нет — играем то, что попало в кадр */
+    if (!still && window.IntersectionObserver && window.matchMedia("(hover:none)").matches){
+      var vio = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting) play(e.target); else e.target.pause();
+        });
+      }, { threshold: 0.6 });
+      Array.prototype.forEach.call(grid.querySelectorAll(".thumb video"), function(v){ vio.observe(v); });
+    }
+  }
+
+  close.addEventListener("click", closeWork);
+  view.addEventListener("click", function(e){ if (e.target === view) closeWork(); });
+  document.addEventListener("keydown", function(e){
+    if (e.key === "Escape" && !view.classList.contains("hidden")) closeWork();
+  });
+
+  /* ── появление секций ── */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -10% 0px" });
+  document.querySelectorAll(".rise").forEach(function(el){ io.observe(el); });
+
+  requestAnimationFrame(function(){ document.body.classList.add("ready"); });
+})();
+</script>
+
+</body>
+</html>
