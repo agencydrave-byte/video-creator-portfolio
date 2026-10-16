@@ -21,7 +21,61 @@ window.WORKS = [
   /* ─────────────── СДЕЛАНО ЧЕРЕЗ ИИ ─────────────── */
 
   {
-    slug: "burger-spot", num: "01", kind: "ai",
+    slug: "coffee-machine-spot", num: "01", kind: "ai",
+    name: "Coffee machine spot",
+    sub: "AI-generated · product",
+    ratio: "16/9",
+    poster: "media/posters/coffee-machine-spot.webp",
+    file: "media/video/coffee-machine-spot.mp4",
+    embed: null,
+    tags: ["Product", "Macro", "Steam"],
+    brief: "A commercial for a capsule machine: beans falling, steam, a capsule dropping into place — the kind of table-top work that normally needs a studio, a rig and a day.",
+    did: [
+      "Generated each beat as its own shot — beans, brew, steam — instead of asking for the whole ad at once.",
+      "Kept one light direction and one teal-and-amber palette so the shots cut together as one spot.",
+      "Held the machine shape and the branding steady, since that is where generated product shots usually fall apart.",
+      "Cut on the movement of the beans and let the steam carry the last frame."
+    ]
+  },
+
+  {
+    slug: "animated-short", num: "02", kind: "ai",
+    name: "Animated short",
+    sub: "AI-generated · 3D style",
+    ratio: "16/9",
+    poster: "media/posters/animated-short.webp",
+    file: "media/video/animated-short.mp4",
+    embed: null,
+    tags: ["Characters", "Story", "Continuity"],
+    brief: "A minute of animation in a big-studio 3D style: a boy, his mother and a dog, carried through a whole little story — far longer than generated video usually stays consistent.",
+    did: [
+      "Locked every character as a reference sheet before a single shot was generated.",
+      "Wrote the story in beats so each shot had a job and the cut could not wander.",
+      "Threw out any take where a face, a costume or the house changed, and generated it again.",
+      "Graded the shots to one warm daylight look and cut the music to the story, not the other way round."
+    ]
+  },
+
+  {
+    slug: "ai-presenter-promo", num: "03", kind: "ai",
+    name: "Studio promo with a presenter",
+    sub: "AI-generated · presenter",
+    ratio: "16/9",
+    poster: "media/posters/ai-presenter-promo.webp",
+    file: "media/video/ai-presenter-promo.mp4",
+    embed: null,
+    tags: ["Presenter", "Lip sync", "Motion graphics"],
+    brief: "A promo for a video studio, presented by someone who does not exist — he walks an office, an edit suite and a wall of screens, and has to stay the same man in all of them.",
+    did: [
+      "Fixed the presenter face, suit and build in references first, then generated every location around him.",
+      "Matched the camera height and the lens feel across the shots so the walk reads as one space.",
+      "Composited the brand screens and the graphics on top rather than asking the model for readable text.",
+      "Cut to the rhythm of the voice-over and ended on the logo wall."
+    ]
+  },
+
+  {
+    slug: "burger-spot", num: "04", kind: "ai",
     name: "Food spot: burger",
     sub: "AI-generated · food",
     ratio: "16/9",
@@ -39,7 +93,7 @@ window.WORKS = [
   },
 
   {
-    slug: "energy-drink-spot", num: "02", kind: "ai",
+    slug: "energy-drink-spot", num: "05", kind: "ai",
     name: "Energy drink spot",
     sub: "AI-generated · product",
     ratio: "16/9",
@@ -57,7 +111,7 @@ window.WORKS = [
   },
 
   {
-    slug: "snoring-spray-ad", num: "03", kind: "ai",
+    slug: "snoring-spray-ad", num: "06", kind: "ai",
     name: "Animated product ad",
     sub: "AI-generated · story ad",
     ratio: "9/16",
@@ -75,7 +129,7 @@ window.WORKS = [
   },
 
   {
-    slug: "ugc-kitchen-ad", num: "04", kind: "ai",
+    slug: "ugc-kitchen-ad", num: "07", kind: "ai",
     name: "UGC-style ad",
     sub: "AI-generated · spokesperson",
     ratio: "9/16",
@@ -93,7 +147,7 @@ window.WORKS = [
   },
 
   {
-    slug: "interior-mood", num: "05", kind: "ai",
+    slug: "interior-mood", num: "08", kind: "ai",
     name: "Interior mood piece",
     sub: "AI-generated · architecture",
     ratio: "9/16",
@@ -111,7 +165,7 @@ window.WORKS = [
   },
 
   {
-    slug: "masked-podcast", num: "06", kind: "ai",
+    slug: "masked-podcast", num: "09", kind: "ai",
     name: "Masked podcast bit",
     sub: "AI-generated · talking characters",
     ratio: "16/9",
@@ -129,7 +183,7 @@ window.WORKS = [
   },
 
   {
-    slug: "action-bus-scene", num: "07", kind: "ai",
+    slug: "action-bus-scene", num: "10", kind: "ai",
     name: "Action scene",
     sub: "AI-generated · fan edit",
     ratio: "16/9",
@@ -147,7 +201,7 @@ window.WORKS = [
   },
 
   {
-    slug: "shaver-spot", num: "08", kind: "ai",
+    slug: "shaver-spot", num: "11", kind: "ai",
     name: "Product spot: shaver",
     sub: "AI-generated · product",
     ratio: "9/16",
@@ -165,7 +219,7 @@ window.WORKS = [
   },
 
   {
-    slug: "lowrider-character", num: "09", kind: "ai",
+    slug: "lowrider-character", num: "12", kind: "ai",
     name: "Animated character",
     sub: "AI-generated · stylised",
     ratio: "9/16",
@@ -184,60 +238,6 @@ window.WORKS = [
 
 
   {
-    slug: "coffee-machine-spot", num: "10", kind: "ai",
-    name: "Coffee machine spot",
-    sub: "AI-generated · product",
-    ratio: "16/9",
-    poster: "media/posters/coffee-machine-spot.webp",
-    file: "media/video/coffee-machine-spot.mp4",
-    embed: null,
-    tags: ["Product", "Macro", "Steam"],
-    brief: "A commercial for a capsule machine: beans falling, steam, a capsule dropping into place — the kind of table-top work that normally needs a studio, a rig and a day.",
-    did: [
-      "Generated each beat as its own shot — beans, brew, steam — instead of asking for the whole ad at once.",
-      "Kept one light direction and one teal-and-amber palette so the shots cut together as one spot.",
-      "Held the machine shape and the branding steady, since that is where generated product shots usually fall apart.",
-      "Cut on the movement of the beans and let the steam carry the last frame."
-    ]
-  },
-
-  {
-    slug: "ai-presenter-promo", num: "11", kind: "ai",
-    name: "Studio promo with a presenter",
-    sub: "AI-generated · presenter",
-    ratio: "16/9",
-    poster: "media/posters/ai-presenter-promo.webp",
-    file: "media/video/ai-presenter-promo.mp4",
-    embed: null,
-    tags: ["Presenter", "Lip sync", "Motion graphics"],
-    brief: "A promo for a video studio, presented by someone who does not exist — he walks an office, an edit suite and a wall of screens, and has to stay the same man in all of them.",
-    did: [
-      "Fixed the presenter face, suit and build in references first, then generated every location around him.",
-      "Matched the camera height and the lens feel across the shots so the walk reads as one space.",
-      "Composited the brand screens and the graphics on top rather than asking the model for readable text.",
-      "Cut to the rhythm of the voice-over and ended on the logo wall."
-    ]
-  },
-
-  {
-    slug: "animated-short", num: "12", kind: "ai",
-    name: "Animated short",
-    sub: "AI-generated · 3D style",
-    ratio: "16/9",
-    poster: "media/posters/animated-short.webp",
-    file: "media/video/animated-short.mp4",
-    embed: null,
-    tags: ["Characters", "Story", "Continuity"],
-    brief: "A minute of animation in a big-studio 3D style: a boy, his mother and a dog, carried through a whole little story — far longer than generated video usually stays consistent.",
-    did: [
-      "Locked every character as a reference sheet before a single shot was generated.",
-      "Wrote the story in beats so each shot had a job and the cut could not wander.",
-      "Threw out any take where a face, a costume or the house changed, and generated it again.",
-      "Graded the shots to one warm daylight look and cut the music to the story, not the other way round."
-    ]
-  },
-
-  {
     slug: "cinematic-stunt-scene", num: "13", kind: "ai",
     name: "Cinematic scene",
     sub: "AI-generated · comedy",
@@ -254,6 +254,7 @@ window.WORKS = [
       "Built the sound — doors, debris, room — because the comedy lands on the timing of the hits."
     ]
   },
+
   /* ─────────────── МОНТАЖ ─────────────── */
 
   {
