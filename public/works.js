@@ -21,7 +21,43 @@ window.WORKS = [
   /* ─────────────── СДЕЛАНО ЧЕРЕЗ ИИ ─────────────── */
 
   {
-    slug: "coffee-machine-spot", num: "01", kind: "ai",
+    slug: "sports-drink-spot", num: "01", kind: "ai",
+    name: "Sports drink spot",
+    sub: "AI-generated · sport",
+    ratio: "9/16",
+    poster: "media/posters/sports-drink-spot.webp",
+    file: "media/video/sports-drink-spot.mp4",
+    embed: null,
+    tags: ["Product", "Sport", "Daylight"],
+    brief: "A park workout that ends on the bottle: running, a handstand, a drink — all generated, cut at the pace of a real sports ad.",
+    did: [
+      "Kept one athlete, one park and one time of day so the shots belong to the same morning.",
+      "Generated the camera low and close to the movement, where generated motion is most convincing.",
+      "Held the bottle label steady in the shots where the product has to read.",
+      "Cut on effort — each shot leaves at the peak of the move."
+    ]
+  },
+
+  {
+    slug: "stratus-force-spot", num: "02", kind: "ai",
+    name: "STRATUS FORCE teaser",
+    sub: "AI-generated · brand teaser",
+    ratio: "9/16",
+    poster: "media/posters/stratus-force-spot.webp",
+    file: "media/video/stratus-force-spot.mp4",
+    embed: null,
+    tags: ["Backlight", "Brand", "Eight seconds"],
+    brief: "Eight seconds of sunset: an athlete catching his breath against the light, and the brand name landing on the last beat.",
+    did: [
+      "Built the whole thing on one backlit setup, so the sun does the grading.",
+      "Generated the breathing and the recovery rather than the effort — the quiet beat sells the exhaustion.",
+      "Held the silhouette clean so the type has somewhere to sit.",
+      "Brought the name in on the final move and cut before it outstays."
+    ]
+  },
+
+  {
+    slug: "coffee-machine-spot", num: "03", kind: "ai",
     name: "Coffee machine spot",
     sub: "AI-generated · product",
     ratio: "16/9",
@@ -39,7 +75,7 @@ window.WORKS = [
   },
 
   {
-    slug: "animated-short", num: "02", kind: "ai",
+    slug: "animated-short", num: "04", kind: "ai",
     name: "Animated short",
     sub: "AI-generated · 3D style",
     ratio: "16/9",
@@ -57,7 +93,7 @@ window.WORKS = [
   },
 
   {
-    slug: "ai-presenter-promo", num: "03", kind: "ai",
+    slug: "ai-presenter-promo", num: "05", kind: "ai",
     name: "Studio promo with a presenter",
     sub: "AI-generated · presenter",
     ratio: "16/9",
@@ -75,7 +111,7 @@ window.WORKS = [
   },
 
   {
-    slug: "burger-spot", num: "04", kind: "ai",
+    slug: "burger-spot", num: "06", kind: "ai",
     name: "Food spot: burger",
     sub: "AI-generated · food",
     ratio: "16/9",
@@ -93,7 +129,7 @@ window.WORKS = [
   },
 
   {
-    slug: "energy-drink-spot", num: "05", kind: "ai",
+    slug: "energy-drink-spot", num: "07", kind: "ai",
     name: "Energy drink spot",
     sub: "AI-generated · product",
     ratio: "16/9",
@@ -111,7 +147,7 @@ window.WORKS = [
   },
 
   {
-    slug: "snoring-spray-ad", num: "06", kind: "ai",
+    slug: "snoring-spray-ad", num: "08", kind: "ai",
     name: "Animated product ad",
     sub: "AI-generated · story ad",
     ratio: "9/16",
@@ -129,7 +165,7 @@ window.WORKS = [
   },
 
   {
-    slug: "ugc-kitchen-ad", num: "07", kind: "ai",
+    slug: "ugc-kitchen-ad", num: "09", kind: "ai",
     name: "UGC-style ad",
     sub: "AI-generated · spokesperson",
     ratio: "9/16",
@@ -147,7 +183,7 @@ window.WORKS = [
   },
 
   {
-    slug: "interior-mood", num: "08", kind: "ai",
+    slug: "interior-mood", num: "10", kind: "ai",
     name: "Interior mood piece",
     sub: "AI-generated · architecture",
     ratio: "9/16",
@@ -165,7 +201,7 @@ window.WORKS = [
   },
 
   {
-    slug: "masked-podcast", num: "09", kind: "ai",
+    slug: "masked-podcast", num: "11", kind: "ai",
     name: "Masked podcast bit",
     sub: "AI-generated · talking characters",
     ratio: "16/9",
@@ -183,7 +219,7 @@ window.WORKS = [
   },
 
   {
-    slug: "action-bus-scene", num: "10", kind: "ai",
+    slug: "action-bus-scene", num: "12", kind: "ai",
     name: "Action scene",
     sub: "AI-generated · fan edit",
     ratio: "16/9",
@@ -201,7 +237,7 @@ window.WORKS = [
   },
 
   {
-    slug: "shaver-spot", num: "11", kind: "ai",
+    slug: "shaver-spot", num: "13", kind: "ai",
     name: "Product spot: shaver",
     sub: "AI-generated · product",
     ratio: "9/16",
@@ -219,7 +255,7 @@ window.WORKS = [
   },
 
   {
-    slug: "lowrider-character", num: "12", kind: "ai",
+    slug: "lowrider-character", num: "14", kind: "ai",
     name: "Animated character",
     sub: "AI-generated · stylised",
     ratio: "9/16",
@@ -238,7 +274,7 @@ window.WORKS = [
 
 
   {
-    slug: "cinematic-stunt-scene", num: "13", kind: "ai",
+    slug: "cinematic-stunt-scene", num: "15", kind: "ai",
     name: "Cinematic scene",
     sub: "AI-generated · comedy",
     ratio: "16/9",
@@ -252,42 +288,6 @@ window.WORKS = [
       "Kept one house, one time of night and one key light across all the shots.",
       "Cut on impacts so the separately generated angles feel like one continuous scene.",
       "Built the sound — doors, debris, room — because the comedy lands on the timing of the hits."
-    ]
-  },
-
-  {
-    slug: "sports-drink-spot", num: "14", kind: "ai",
-    name: "Sports drink spot",
-    sub: "AI-generated · sport",
-    ratio: "9/16",
-    poster: "media/posters/sports-drink-spot.webp",
-    file: "media/video/sports-drink-spot.mp4",
-    embed: null,
-    tags: ["Product", "Sport", "Daylight"],
-    brief: "A park workout that ends on the bottle: running, a handstand, a drink — all generated, cut at the pace of a real sports ad.",
-    did: [
-      "Kept one athlete, one park and one time of day so the shots belong to the same morning.",
-      "Generated the camera low and close to the movement, where generated motion is most convincing.",
-      "Held the bottle label steady in the shots where the product has to read.",
-      "Cut on effort — each shot leaves at the peak of the move."
-    ]
-  },
-
-  {
-    slug: "stratus-force-spot", num: "15", kind: "ai",
-    name: "STRATUS FORCE teaser",
-    sub: "AI-generated · brand teaser",
-    ratio: "9/16",
-    poster: "media/posters/stratus-force-spot.webp",
-    file: "media/video/stratus-force-spot.mp4",
-    embed: null,
-    tags: ["Backlight", "Brand", "Eight seconds"],
-    brief: "Eight seconds of sunset: an athlete catching his breath against the light, and the brand name landing on the last beat.",
-    did: [
-      "Built the whole thing on one backlit setup, so the sun does the grading.",
-      "Generated the breathing and the recovery rather than the effort — the quiet beat sells the exhaustion.",
-      "Held the silhouette clean so the type has somewhere to sit.",
-      "Brought the name in on the final move and cut before it outstays."
     ]
   },
 
