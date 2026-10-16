@@ -182,10 +182,82 @@ window.WORKS = [
     ]
   },
 
+
+  {
+    slug: "coffee-machine-spot", num: "10", kind: "ai",
+    name: "Coffee machine spot",
+    sub: "AI-generated · product",
+    ratio: "16/9",
+    poster: "media/posters/coffee-machine-spot.webp",
+    file: "media/video/coffee-machine-spot.mp4",
+    embed: null,
+    tags: ["Product", "Macro", "Steam"],
+    brief: "A commercial for a capsule machine: beans falling, steam, a capsule dropping into place — the kind of table-top work that normally needs a studio, a rig and a day.",
+    did: [
+      "Generated each beat as its own shot — beans, brew, steam — instead of asking for the whole ad at once.",
+      "Kept one light direction and one teal-and-amber palette so the shots cut together as one spot.",
+      "Held the machine shape and the branding steady, since that is where generated product shots usually fall apart.",
+      "Cut on the movement of the beans and let the steam carry the last frame."
+    ]
+  },
+
+  {
+    slug: "ai-presenter-promo", num: "11", kind: "ai",
+    name: "Studio promo with a presenter",
+    sub: "AI-generated · presenter",
+    ratio: "16/9",
+    poster: "media/posters/ai-presenter-promo.webp",
+    file: "media/video/ai-presenter-promo.mp4",
+    embed: null,
+    tags: ["Presenter", "Lip sync", "Motion graphics"],
+    brief: "A promo for a video studio, presented by someone who does not exist — he walks an office, an edit suite and a wall of screens, and has to stay the same man in all of them.",
+    did: [
+      "Fixed the presenter face, suit and build in references first, then generated every location around him.",
+      "Matched the camera height and the lens feel across the shots so the walk reads as one space.",
+      "Composited the brand screens and the graphics on top rather than asking the model for readable text.",
+      "Cut to the rhythm of the voice-over and ended on the logo wall."
+    ]
+  },
+
+  {
+    slug: "animated-short", num: "12", kind: "ai",
+    name: "Animated short",
+    sub: "AI-generated · 3D style",
+    ratio: "16/9",
+    poster: "media/posters/animated-short.webp",
+    file: "media/video/animated-short.mp4",
+    embed: null,
+    tags: ["Characters", "Story", "Continuity"],
+    brief: "A minute of animation in a big-studio 3D style: a boy, his mother and a dog, carried through a whole little story — far longer than generated video usually stays consistent.",
+    did: [
+      "Locked every character as a reference sheet before a single shot was generated.",
+      "Wrote the story in beats so each shot had a job and the cut could not wander.",
+      "Threw out any take where a face, a costume or the house changed, and generated it again.",
+      "Graded the shots to one warm daylight look and cut the music to the story, not the other way round."
+    ]
+  },
+
+  {
+    slug: "cinematic-stunt-scene", num: "13", kind: "ai",
+    name: "Cinematic scene",
+    sub: "AI-generated · comedy",
+    ratio: "16/9",
+    poster: "media/posters/cinematic-stunt-scene.webp",
+    file: "media/video/cinematic-stunt-scene.mp4",
+    embed: null,
+    tags: ["Night interior", "Scale gag", "Sound design"],
+    brief: "A night-time break-in played as a joke, with two characters at wildly different scales in the same frame — the shot generated video is worst at.",
+    did: [
+      "Storyboarded the gag so the scale difference reads instantly in every angle.",
+      "Kept one house, one time of night and one key light across all the shots.",
+      "Cut on impacts so the separately generated angles feel like one continuous scene.",
+      "Built the sound — doors, debris, room — because the comedy lands on the timing of the hits."
+    ]
+  },
   /* ─────────────── МОНТАЖ ─────────────── */
 
   {
-    slug: "sunset-motivation", num: "10", kind: "edit",
+    slug: "sunset-motivation", num: "14", kind: "edit",
     name: "Sunset motivation reel",
     sub: "Instagram Reels · 40 sec",
     ratio: "9/16",
@@ -203,7 +275,7 @@ window.WORKS = [
   },
 
   {
-    slug: "laws-of-power", num: "11", kind: "edit",
+    slug: "laws-of-power", num: "15", kind: "edit",
     name: "48 Laws of Power",
     sub: "Instagram Reels · book quote",
     ratio: "9/16",
@@ -221,7 +293,7 @@ window.WORKS = [
   },
 
   {
-    slug: "talking-head-grid", num: "12", kind: "edit",
+    slug: "talking-head-grid", num: "16", kind: "edit",
     name: "Talking head on a grid",
     sub: "Instagram Reels · 30 sec",
     ratio: "9/16",
@@ -239,7 +311,7 @@ window.WORKS = [
   },
 
   {
-    slug: "creator-talking-head", num: "13", kind: "edit",
+    slug: "creator-talking-head", num: "17", kind: "edit",
     name: "Creator talking head",
     sub: "Instagram Reels · 20 sec",
     ratio: "9/16",
@@ -257,7 +329,7 @@ window.WORKS = [
   },
 
   {
-    slug: "text-explainer", num: "14", kind: "edit",
+    slug: "text-explainer", num: "18", kind: "edit",
     name: "Text-driven explainer",
     sub: "Vertical · 90 sec",
     ratio: "9/16",
@@ -275,7 +347,7 @@ window.WORKS = [
   },
 
   {
-    slug: "quiet-lifestyle", num: "15", kind: "edit",
+    slug: "quiet-lifestyle", num: "19", kind: "edit",
     name: "Quiet lifestyle reel",
     sub: "Instagram Reels · 25 sec",
     ratio: "9/16",
@@ -293,7 +365,7 @@ window.WORKS = [
   },
 
   {
-    slug: "bw-portrait", num: "16", kind: "edit",
+    slug: "bw-portrait", num: "20", kind: "edit",
     name: "Black and white cut",
     sub: "TikTok · 15 sec",
     ratio: "9/16",
@@ -311,7 +383,7 @@ window.WORKS = [
   },
 
   {
-    slug: "movie-meme", num: "17", kind: "edit",
+    slug: "movie-meme", num: "21", kind: "edit",
     name: "Movie meme cut",
     sub: "TikTok · 20 sec",
     ratio: "9/16",
@@ -329,7 +401,7 @@ window.WORKS = [
   },
 
   {
-    slug: "trading-recap", num: "18", kind: "edit",
+    slug: "trading-recap", num: "22", kind: "edit",
     name: "Trading recap",
     sub: "Horizontal · screen recording",
     ratio: "16/9",
@@ -344,6 +416,150 @@ window.WORKS = [
       "Added captions, since this gets watched without sound more often than not.",
       "Kept the interface readable at the size it will actually be viewed."
     ]
-  }
+  },
 
+
+  {
+    slug: "bathroom-ugc-talk", num: "23", kind: "edit",
+    name: "Spokesperson cut",
+    sub: "Instagram Reels · 15 sec",
+    ratio: "9/16",
+    poster: "media/posters/bathroom-ugc-talk.webp",
+    file: "media/video/bathroom-ugc-talk.mp4",
+    embed: null,
+    tags: ["Punch-ins", "Pacing", "Clean audio"],
+    brief: "Fifteen seconds cut out of a long, rambling selfie take — the version that holds, with nothing left in that does not earn its place.",
+    did: [
+      "Kept only the sentences that carry the point and cut every restart and breath between them.",
+      "Hid the joins behind punch-ins, so a heavily cut take still plays as one.",
+      "Evened out the voice and took the room hiss down without making it sound processed.",
+      "Framed each size so the eyes stay on the same line through the cuts."
+    ]
+  },
+
+  {
+    slug: "car-selfie-reel", num: "24", kind: "edit",
+    name: "Captioned selfie reel",
+    sub: "Instagram Reels · 11 sec",
+    ratio: "9/16",
+    poster: "media/posters/car-selfie-reel.webp",
+    file: "media/video/car-selfie-reel.mp4",
+    embed: null,
+    tags: ["Captions", "Short form", "Timing"],
+    brief: "One line, eleven seconds, filmed on a phone in a car — the whole job is the caption timing and knowing where to stop.",
+    did: [
+      "Broke the line into caption cards that change on the beat of the speech, not on a timer.",
+      "Set the type high in the frame so it clears the interface and the face.",
+      "Trimmed the tail at the punchline instead of letting the take run out.",
+      "Lifted the voice over the car noise and kept the levels flat across the cut."
+    ]
+  },
+
+  {
+    slug: "sportswear-run-reel", num: "25", kind: "edit",
+    name: "Sportswear reel",
+    sub: "Vertical · 25 sec",
+    ratio: "9/16",
+    poster: "media/posters/sportswear-run-reel.webp",
+    file: "media/video/sportswear-run-reel.mp4",
+    embed: null,
+    tags: ["Speed ramps", "Match cuts", "Grade"],
+    brief: "A running spot built from scattered footage: wide city, feet, a jump, a whip across the road. No voice, so the cut has to carry all of it.",
+    did: [
+      "Built the piece on movement — every cut leaves on a move and lands on one.",
+      "Used speed ramps to push the energy up into the jump and drop it after.",
+      "Matched the blacks and the skin tones so clips from different light read as one shoot.",
+      "Timed the whole thing to the track, with the product shot on the biggest hit."
+    ]
+  },
+
+  {
+    slug: "czech-news-explainer", num: "26", kind: "edit",
+    name: "Explainer on a grid",
+    sub: "Instagram Reels · 27 sec",
+    ratio: "9/16",
+    poster: "media/posters/czech-news-explainer.webp",
+    file: "media/video/czech-news-explainer.mp4",
+    embed: null,
+    tags: ["Reframing", "Subtitles", "Inserts"],
+    brief: "A horizontal talk rebuilt for a vertical feed in Czech: the speaker in a window on a moving grid, with the thing he is talking about shown beside him.",
+    did: [
+      "Set the speaker in a framed window so the vertical space is used instead of padded.",
+      "Cut the inserts — the chart, the numbers — in exactly on the words they belong to.",
+      "Subtitled the whole thing in Czech and highlighted the load-bearing words.",
+      "Kept the channel line on screen without letting it fight the captions."
+    ]
+  },
+
+  {
+    slug: "creatine-podcast-cut", num: "27", kind: "edit",
+    name: "Podcast cut-down",
+    sub: "Instagram Reels · 35 sec",
+    ratio: "9/16",
+    poster: "media/posters/creatine-podcast-cut.webp",
+    file: "media/video/creatine-podcast-cut.mp4",
+    embed: null,
+    tags: ["Reframing", "Hook", "Captions"],
+    brief: "A long podcast reduced to the one answer worth clipping, with an opening built to stop the scroll before the talking starts.",
+    did: [
+      "Found the clip inside the episode — the claim, the reason, the turn — and cut around it.",
+      "Opened on a graphic hook so the first second promises what the clip delivers.",
+      "Reframed the horizontal footage to vertical, cutting between the angles on the beats.",
+      "Set big captions on the key words so the clip works muted in the feed."
+    ]
+  },
+
+  {
+    slug: "tennis-product-ugc", num: "28", kind: "edit",
+    name: "Product UGC cut",
+    sub: "Instagram Reels · 12 sec",
+    ratio: "9/16",
+    poster: "media/posters/tennis-product-ugc.webp",
+    file: "media/video/tennis-product-ugc.mp4",
+    embed: null,
+    tags: ["Story beats", "Call to action", "Match cuts"],
+    brief: "Store to court in twelve seconds: pick up the box, open it, use what is inside. A small story told entirely in cuts.",
+    did: [
+      "Ordered the clips as a journey rather than as a montage, so the product gets a before and an after.",
+      "Cut on the hands — each shot hands the object to the next one.",
+      "Kept one call-to-action line pinned on screen for the whole clip.",
+      "Matched the greens and the daylight across store and court so the jump does not jar."
+    ]
+  },
+
+  {
+    slug: "logo-reveal-3d", num: "29", kind: "edit",
+    name: "3D logo reveal",
+    sub: "Horizontal · 15 sec",
+    ratio: "16/9",
+    poster: "media/posters/logo-reveal-3d.webp",
+    file: "media/video/logo-reveal-3d.mp4",
+    embed: null,
+    tags: ["3D", "Lighting", "Sound design"],
+    brief: "A metal-and-neon logo build for a gaming brand: the mark assembles in the dark, the characters step in, the name lands.",
+    did: [
+      "Built the reveal in stages so each element arrives with its own beat.",
+      "Lit it with one hard key and a red rim — the material does the work, not the effects.",
+      "Timed the assembly to the sound design, with the hit landing on the finished mark.",
+      "Held the final frame long enough to be screenshotted and used as an avatar."
+    ]
+  },
+
+  {
+    slug: "journal-motion-reel", num: "30", kind: "edit",
+    name: "App promo, motion only",
+    sub: "Vertical · 24 sec",
+    ratio: "9/16",
+    poster: "media/posters/journal-motion-reel.webp",
+    file: "media/video/journal-motion-reel.mp4",
+    embed: null,
+    tags: ["Motion design", "UI", "Typography"],
+    brief: "A promo for a trading journal made without a single frame of footage: interface pieces, type and numbers, animated into four claims.",
+    did: [
+      "Rebuilt the product interface as animated cards instead of filming the screen.",
+      "Gave the piece one system — dark ground, one green accent, one typeface — and kept to it.",
+      "Animated each claim in on its line and cleared the frame before the next one.",
+      "Kept every beat short enough that the viewer finishes reading exactly as it leaves."
+    ]
+  },
 ];
