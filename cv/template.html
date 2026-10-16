@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Danylo Korobko — AI creator and video editor · CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ═══════════ ТОКЕНЫ ═══════════ */
+:root{
+  --ink:#0d1013;
+  --ink-soft:#4e565f;
+  --ink-dim:#79828c;
+  --line:#dfe3e8;
+  --line-soft:#eef1f4;
+  --paper:#ffffff;
+  --font-display:"Unbounded","Trebuchet MS",sans-serif;
+  --font-body:"Golos Text","Segoe UI",system-ui,sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+@page{size:A4;margin:0}
+
+html{background:#f2f4f6}
+body{
+  width:210mm;min-height:297mm;margin:0 auto;
+  background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);font-size:8.7pt;line-height:1.5;
+  padding:12mm 13mm 8.5mm;
+  -webkit-font-smoothing:antialiased;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+
+/* ═══════════ ШАПКА ═══════════ */
+.head{display:flex;gap:8mm;align-items:flex-end;justify-content:space-between}
+.rule{display:block;width:13mm;height:2px;background:var(--ink);margin-bottom:3.5mm}
+.name{
+  font-family:var(--font-display);font-weight:500;
+  font-size:25pt;line-height:1.02;letter-spacing:-0.015em;
+}
+.name span{display:block;font-size:11.5pt;font-weight:300;letter-spacing:0.18em;
+  text-transform:uppercase;color:var(--ink-dim);margin-bottom:1.5mm}
+.role{
+  font-family:var(--font-display);font-weight:300;font-size:10pt;
+  color:var(--ink-soft);margin-top:2.6mm;letter-spacing:0.01em;
+}
+.contacts{display:flex;flex-wrap:wrap;gap:1.6mm 5mm;margin-top:4mm;font-size:8.4pt;color:var(--ink-soft)}
+.contacts div{display:flex;align-items:center;gap:1.8mm}
+.contacts svg{width:3.6mm;height:3.6mm;flex:none;stroke:var(--ink-dim);stroke-width:1.7;fill:none;
+  stroke-linecap:round;stroke-linejoin:round}
+.contacts b{font-weight:500;color:var(--ink)}
+
+.photo{flex:none;width:33mm;background:linear-gradient(#f6f8f9,#eceff3);border-radius:1.6mm;padding:2.5mm 1.5mm 0}
+.photo img{width:100%;height:auto;filter:grayscale(1) contrast(1.04)}
+
+.sep{height:1px;background:var(--line);margin:5mm 0 4.5mm}
+
+/* ═══════════ ПРОФИЛЬ ═══════════ */
+.profile{font-size:9pt;line-height:1.62;color:var(--ink-soft);max-width:172mm}
+.profile b{font-weight:600;color:var(--ink)}
+
+/* ═══════════ СЕТКА ═══════════ */
+.cols{display:grid;grid-template-columns:1.75fr 1fr;gap:9mm;margin-top:5.5mm}
+
+h2{
+  font-family:var(--font-display);font-weight:500;font-size:8.6pt;
+  letter-spacing:0.17em;text-transform:uppercase;
+  padding-bottom:1.8mm;border-bottom:1px solid var(--line);margin-bottom:3.6mm;
+}
+section + section{margin-top:5.5mm}
+
+/* ═══════════ ОПЫТ ═══════════ */
+.item{margin-bottom:4mm}
+.item:last-child{margin-bottom:0}
+.item-top{display:flex;justify-content:space-between;align-items:baseline;gap:4mm}
+.item-title{font-family:var(--font-display);font-weight:500;font-size:9.3pt;letter-spacing:-0.005em}
+.item-when{font-size:7.9pt;color:var(--ink-dim);white-space:nowrap;font-variant-numeric:tabular-nums}
+.item-where{font-size:8.2pt;color:var(--ink-dim);margin-top:0.6mm}
+.item ul{list-style:none;margin-top:2.2mm}
+.item li{position:relative;padding-left:4.2mm;margin-bottom:1.5mm;color:var(--ink-soft)}
+.item li::before{content:"";position:absolute;left:0;top:1.75mm;width:1.6mm;height:1px;background:var(--ink-dim)}
+.item li b{font-weight:600;color:var(--ink)}
+
+/* ═══════════ НАВЫКИ ═══════════ */
+.skill{margin-bottom:3.4mm}
+.skill:last-child{margin-bottom:0}
+.skill-k{font-size:7.8pt;letter-spacing:0.09em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:1.3mm}
+.tags{display:flex;flex-wrap:wrap;gap:1.4mm}
+.tags span{
+  border:1px solid var(--line);border-radius:1mm;
+  padding:0.9mm 2.1mm;font-size:7.9pt;color:var(--ink);background:#fbfcfd;
+}
+
+.rows{list-style:none}
+.rows li{display:flex;justify-content:space-between;gap:3mm;
+  padding:1.5mm 0;border-bottom:1px solid var(--line-soft)}
+.rows li:last-child{border-bottom:0}
+.rows .k{color:var(--ink)}
+.rows .v{color:var(--ink-dim);white-space:nowrap}
+
+.note{font-size:8.3pt;color:var(--ink-soft);line-height:1.55}
+
+/* ═══════════ ПОДВАЛ ═══════════ */
+.foot{
+  margin-top:5.5mm;padding-top:2.5mm;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;font-size:7.8pt;color:var(--ink-dim)
+}
+
+@media print{html{background:#fff}body{margin:0}}
+</style>
+</head>
+<body>
+
+<!-- ══════════ ШАПКА ══════════ -->
+<header class="head">
+  <div>
+    <span class="rule"></span>
+    <h1 class="name"><span>Korobko</span>Danylo</h1>
+    <p class="role">AI creator &amp; video editor &mdash; short-form vertical video</p>
+
+    <div class="contacts">
+      <div>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <span>Prague, Czechia &middot; remote</span>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4L3 11l6 2 2 6z"/><path d="M9 13l12-9"/></svg>
+        <span>Telegram <b>@danylo_mf</b></span>
+      </div>
+      <div>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 2.5 15 0 18M12 3c-2.5 2.6-2.5 15 0 18"/></svg>
+        <span>agencydrave-byte.github.io/video-creator-portfolio</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="photo">
+    <img src="{{PORTRAIT}}" alt="Danylo Korobko">
+  </div>
+</header>
+
+<div class="sep"></div>
+
+<!-- ══════════ ПРОФИЛЬ ══════════ -->
+<p class="profile">
+  I make short-form vertical video for <b>Instagram Reels and TikTok</b> &mdash; both ordinary
+  edits from raw footage and video that was never filmed at all: the script, the shot list and
+  the prompts written in <b>Claude Code</b>, the picture generated in <b>Higgsfield</b>, then cut,
+  graded and finished by hand. <b>A year and a half of editing</b> behind me, on freelance jobs and
+  on my own projects, with <b>32 finished pieces</b> in the portfolio. I run a project end to end,
+  alone, from the first message to the delivered file.
+</p>
+
+<div class="cols">
+
+  <!-- ─────── ЛЕВАЯ КОЛОНКА ─────── -->
+  <div>
+    <section>
+      <h2>Experience</h2>
+
+      <div class="item">
+        <div class="item-top">
+          <p class="item-title">AI creator &amp; video editor &mdash; freelance</p>
+          <p class="item-when">2025 &mdash; now</p>
+        </div>
+        <p class="item-where">Remote &middot; clients in any country</p>
+        <ul>
+          <li><b>32 published pieces</b>: 20 fully AI-generated, 12 conventional edits &mdash; spots,
+            UGC ads, brand teasers, explainers, podcast cuts.</li>
+          <li>Vertical short-form built the way the feed needs it: the hook in the first seconds,
+            cuts on the beat, captions readable on a phone, sound that does not fight the voice.</li>
+          <li>Whole AI pipeline on my own: <b>script and prompts in Claude Code</b>,
+            <b>generation in Higgsfield</b>, then editing, colour, sound and titles by hand.</li>
+          <li>Direct contact with the client instead of a chain of managers &mdash; brief, cut,
+            revisions and delivery while the material is still worth posting.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-top">
+          <p class="item-title">Personal projects &amp; team work</p>
+          <p class="item-when">ongoing</p>
+        </div>
+        <p class="item-where">Own content &middot; shared projects with a team</p>
+        <ul>
+          <li>Worked <b>in a team</b> on shared projects: split tasks, handed work over, kept
+            deadlines and went through review.</li>
+          <li>Keep shooting and cutting for myself &mdash; that is where new formats and new
+            generation tools get tested before they go to a client.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+
+      <div class="item">
+        <div class="item-top">
+          <p class="item-title">Secondary technical school &mdash; IT</p>
+          <p class="item-when">final year</p>
+        </div>
+        <p class="item-where">Prague, Czechia</p>
+      </div>
+
+      <div class="item">
+        <div class="item-top">
+          <p class="item-title">GoIT &mdash; programming courses</p>
+          <p class="item-when">completed</p>
+        </div>
+        <p class="item-where">Online</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ─────── ПРАВАЯ КОЛОНКА ─────── -->
+  <div>
+    <section>
+      <h2>Skills</h2>
+
+      <div class="skill">
+        <p class="skill-k">AI video</p>
+        <div class="tags">
+          <span>Higgsfield</span><span>Claude Code</span><span>Prompting</span>
+          <span>Shot lists</span><span>Storyboards</span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <p class="skill-k">Editing</p>
+        <div class="tags">
+          <span>Reels</span><span>TikTok</span><span>Pacing</span><span>Captions</span>
+          <span>Sound</span><span>Colour</span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <p class="skill-k">Working style</p>
+        <div class="tags">
+          <span>Solo delivery</span><span>Remote</span><span>Team work</span><span>Deadlines</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <ul class="rows">
+        <li><span class="k">Ukrainian</span><span class="v">native</span></li>
+        <li><span class="k">Russian</span><span class="v">native</span></li>
+        <li><span class="k">Czech</span><span class="v">C1</span></li>
+        <li><span class="k">English</span><span class="v">B1</span></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Beyond work</h2>
+      <p class="note">
+        Sport, regularly &mdash; it keeps the discipline that long edits need. And a genuine
+        interest in where AI is going: I believe the future belongs to it, so I try every new
+        generation model as it comes out.
+      </p>
+    </section>
+  </div>
+
+</div>
+
+<div class="foot">
+  <span>Danylo Korobko &middot; CV</span>
+  <span>Open for new projects</span>
+</div>
+
+</body>
+</html>
