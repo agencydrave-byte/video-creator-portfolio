@@ -255,10 +255,136 @@ window.WORKS = [
     ]
   },
 
+  {
+    slug: "sports-drink-spot", num: "14", kind: "ai",
+    name: "Sports drink spot",
+    sub: "AI-generated · sport",
+    ratio: "9/16",
+    poster: "media/posters/sports-drink-spot.webp",
+    file: "media/video/sports-drink-spot.mp4",
+    embed: null,
+    tags: ["Product", "Sport", "Daylight"],
+    brief: "A park workout that ends on the bottle: running, a handstand, a drink — all generated, cut at the pace of a real sports ad.",
+    did: [
+      "Kept one athlete, one park and one time of day so the shots belong to the same morning.",
+      "Generated the camera low and close to the movement, where generated motion is most convincing.",
+      "Held the bottle label steady in the shots where the product has to read.",
+      "Cut on effort — each shot leaves at the peak of the move."
+    ]
+  },
+
+  {
+    slug: "stratus-force-spot", num: "15", kind: "ai",
+    name: "STRATUS FORCE teaser",
+    sub: "AI-generated · brand teaser",
+    ratio: "9/16",
+    poster: "media/posters/stratus-force-spot.webp",
+    file: "media/video/stratus-force-spot.mp4",
+    embed: null,
+    tags: ["Backlight", "Brand", "Eight seconds"],
+    brief: "Eight seconds of sunset: an athlete catching his breath against the light, and the brand name landing on the last beat.",
+    did: [
+      "Built the whole thing on one backlit setup, so the sun does the grading.",
+      "Generated the breathing and the recovery rather than the effort — the quiet beat sells the exhaustion.",
+      "Held the silhouette clean so the type has somewhere to sit.",
+      "Brought the name in on the final move and cut before it outstays."
+    ]
+  },
+
+  {
+    slug: "bathroom-ugc-talk", num: "16", kind: "ai",
+    name: "Spokesperson cut",
+    sub: "AI-generated · spokesperson",
+    ratio: "9/16",
+    poster: "media/posters/bathroom-ugc-talk.webp",
+    file: "media/video/bathroom-ugc-talk.mp4",
+    embed: null,
+    tags: ["Avatar", "Lip sync", "Punch-ins"],
+    brief: "A presenter talking to camera in a home bathroom — generated, then cut like a real selfie take so the performance does not feel even.",
+    did: [
+      "Built the avatar from fixed references so the face, hair and clothes hold for the whole take.",
+      "Generated the speech in pieces and cut out the frames where the lip sync drifts.",
+      "Hid the joins behind punch-ins, which is what makes a generated take read as one.",
+      "Kept the room light and the mirror reflection consistent across every shot."
+    ]
+  },
+
+  {
+    slug: "car-selfie-reel", num: "17", kind: "ai",
+    name: "Captioned selfie reel",
+    sub: "AI-generated · spokesperson",
+    ratio: "9/16",
+    poster: "media/posters/car-selfie-reel.webp",
+    file: "media/video/car-selfie-reel.mp4",
+    embed: null,
+    tags: ["Avatar", "Captions", "Short form"],
+    brief: "A phone-in-the-car selfie that was never filmed: one line, eleven seconds, and the caption timing doing the rest.",
+    did: [
+      "Generated the presenter and the car interior together, so the light through the windows stays put.",
+      "Kept the hands in frame — generated hands are the first thing to fall apart, so the shots that held were the ones used.",
+      "Broke the line into caption cards that change on the beat of the speech.",
+      "Trimmed the tail at the punchline instead of letting the take run out."
+    ]
+  },
+
+  {
+    slug: "sportswear-run-reel", num: "18", kind: "ai",
+    name: "Sportswear reel",
+    sub: "AI-generated · sport",
+    ratio: "9/16",
+    poster: "media/posters/sportswear-run-reel.webp",
+    file: "media/video/sportswear-run-reel.mp4",
+    embed: null,
+    tags: ["Avatar", "Match cuts", "Grade"],
+    brief: "A running spot generated shot by shot — wide city, feet, a jump, a whip across the road — then cut so the energy carries through.",
+    did: [
+      "Generated each beat separately and kept one athlete, one outfit and one city across all of them.",
+      "Built the piece on movement: every cut leaves on a move and lands on one.",
+      "Matched the blacks and the skin tones so shots from different generations read as one shoot.",
+      "Timed the whole thing to the track, with the product shot on the biggest hit."
+    ]
+  },
+
+  {
+    slug: "tennis-product-ugc", num: "19", kind: "ai",
+    name: "Product UGC cut",
+    sub: "AI-generated · UGC ad",
+    ratio: "9/16",
+    poster: "media/posters/tennis-product-ugc.webp",
+    file: "media/video/tennis-product-ugc.mp4",
+    embed: null,
+    tags: ["Avatar", "Story beats", "Call to action"],
+    brief: "Store to court in twelve seconds, with no store, no court and no camera: a small generated story that has to survive being watched twice.",
+    did: [
+      "Generated the shots as a journey rather than a montage, so the product gets a before and an after.",
+      "Held the same person, bag and packaging through every shot — that is where these usually give themselves away.",
+      "Cut on the hands, so each shot passes the object to the next one.",
+      "Finished it like real UGC: slightly handheld framing, one pinned call-to-action line."
+    ]
+  },
+
+  {
+    slug: "logo-reveal-3d", num: "20", kind: "ai",
+    name: "3D logo reveal",
+    sub: "AI-generated · brand mark",
+    ratio: "16/9",
+    poster: "media/posters/logo-reveal-3d.webp",
+    file: "media/video/logo-reveal-3d.mp4",
+    embed: null,
+    tags: ["3D look", "Lighting", "Sound design"],
+    brief: "A metal-and-neon logo build for a gaming brand: the mark assembles in the dark, the characters step in, the name lands.",
+    did: [
+      "Generated the mark and the room around it instead of modelling and rendering them.",
+      "Kept one hard key and a red rim so the metal reads as a material, not as an effect.",
+      "Timed the assembly to the sound design, with the hit landing on the finished mark.",
+      "Held the final frame long enough to be screenshotted and used as an avatar."
+    ]
+  },
+
   /* ─────────────── МОНТАЖ ─────────────── */
 
   {
-    slug: "sunset-motivation", num: "14", kind: "edit",
+    slug: "sunset-motivation", num: "21", kind: "edit",
     name: "Sunset motivation reel",
     sub: "Instagram Reels · 40 sec",
     ratio: "9/16",
@@ -276,7 +402,7 @@ window.WORKS = [
   },
 
   {
-    slug: "laws-of-power", num: "15", kind: "edit",
+    slug: "laws-of-power", num: "22", kind: "edit",
     name: "48 Laws of Power",
     sub: "Instagram Reels · book quote",
     ratio: "9/16",
@@ -294,7 +420,7 @@ window.WORKS = [
   },
 
   {
-    slug: "talking-head-grid", num: "16", kind: "edit",
+    slug: "talking-head-grid", num: "23", kind: "edit",
     name: "Talking head on a grid",
     sub: "Instagram Reels · 30 sec",
     ratio: "9/16",
@@ -312,7 +438,7 @@ window.WORKS = [
   },
 
   {
-    slug: "creator-talking-head", num: "17", kind: "edit",
+    slug: "creator-talking-head", num: "24", kind: "edit",
     name: "Creator talking head",
     sub: "Instagram Reels · 20 sec",
     ratio: "9/16",
@@ -330,7 +456,7 @@ window.WORKS = [
   },
 
   {
-    slug: "text-explainer", num: "18", kind: "edit",
+    slug: "text-explainer", num: "25", kind: "edit",
     name: "Text-driven explainer",
     sub: "Vertical · 90 sec",
     ratio: "9/16",
@@ -348,7 +474,7 @@ window.WORKS = [
   },
 
   {
-    slug: "quiet-lifestyle", num: "19", kind: "edit",
+    slug: "quiet-lifestyle", num: "26", kind: "edit",
     name: "Quiet lifestyle reel",
     sub: "Instagram Reels · 25 sec",
     ratio: "9/16",
@@ -366,7 +492,7 @@ window.WORKS = [
   },
 
   {
-    slug: "bw-portrait", num: "20", kind: "edit",
+    slug: "bw-portrait", num: "27", kind: "edit",
     name: "Black and white cut",
     sub: "TikTok · 15 sec",
     ratio: "9/16",
@@ -384,7 +510,7 @@ window.WORKS = [
   },
 
   {
-    slug: "movie-meme", num: "21", kind: "edit",
+    slug: "movie-meme", num: "28", kind: "edit",
     name: "Movie meme cut",
     sub: "TikTok · 20 sec",
     ratio: "9/16",
@@ -402,7 +528,7 @@ window.WORKS = [
   },
 
   {
-    slug: "trading-recap", num: "22", kind: "edit",
+    slug: "trading-recap", num: "29", kind: "edit",
     name: "Trading recap",
     sub: "Horizontal · screen recording",
     ratio: "16/9",
@@ -421,61 +547,7 @@ window.WORKS = [
 
 
   {
-    slug: "bathroom-ugc-talk", num: "23", kind: "edit",
-    name: "Spokesperson cut",
-    sub: "Instagram Reels · 15 sec",
-    ratio: "9/16",
-    poster: "media/posters/bathroom-ugc-talk.webp",
-    file: "media/video/bathroom-ugc-talk.mp4",
-    embed: null,
-    tags: ["Punch-ins", "Pacing", "Clean audio"],
-    brief: "Fifteen seconds cut out of a long, rambling selfie take — the version that holds, with nothing left in that does not earn its place.",
-    did: [
-      "Kept only the sentences that carry the point and cut every restart and breath between them.",
-      "Hid the joins behind punch-ins, so a heavily cut take still plays as one.",
-      "Evened out the voice and took the room hiss down without making it sound processed.",
-      "Framed each size so the eyes stay on the same line through the cuts."
-    ]
-  },
-
-  {
-    slug: "car-selfie-reel", num: "24", kind: "edit",
-    name: "Captioned selfie reel",
-    sub: "Instagram Reels · 11 sec",
-    ratio: "9/16",
-    poster: "media/posters/car-selfie-reel.webp",
-    file: "media/video/car-selfie-reel.mp4",
-    embed: null,
-    tags: ["Captions", "Short form", "Timing"],
-    brief: "One line, eleven seconds, filmed on a phone in a car — the whole job is the caption timing and knowing where to stop.",
-    did: [
-      "Broke the line into caption cards that change on the beat of the speech, not on a timer.",
-      "Set the type high in the frame so it clears the interface and the face.",
-      "Trimmed the tail at the punchline instead of letting the take run out.",
-      "Lifted the voice over the car noise and kept the levels flat across the cut."
-    ]
-  },
-
-  {
-    slug: "sportswear-run-reel", num: "25", kind: "edit",
-    name: "Sportswear reel",
-    sub: "Vertical · 25 sec",
-    ratio: "9/16",
-    poster: "media/posters/sportswear-run-reel.webp",
-    file: "media/video/sportswear-run-reel.mp4",
-    embed: null,
-    tags: ["Speed ramps", "Match cuts", "Grade"],
-    brief: "A running spot built from scattered footage: wide city, feet, a jump, a whip across the road. No voice, so the cut has to carry all of it.",
-    did: [
-      "Built the piece on movement — every cut leaves on a move and lands on one.",
-      "Used speed ramps to push the energy up into the jump and drop it after.",
-      "Matched the blacks and the skin tones so clips from different light read as one shoot.",
-      "Timed the whole thing to the track, with the product shot on the biggest hit."
-    ]
-  },
-
-  {
-    slug: "czech-news-explainer", num: "26", kind: "edit",
+    slug: "czech-news-explainer", num: "30", kind: "edit",
     name: "Explainer on a grid",
     sub: "Instagram Reels · 27 sec",
     ratio: "9/16",
@@ -493,7 +565,7 @@ window.WORKS = [
   },
 
   {
-    slug: "creatine-podcast-cut", num: "27", kind: "edit",
+    slug: "creatine-podcast-cut", num: "31", kind: "edit",
     name: "Podcast cut-down",
     sub: "Instagram Reels · 35 sec",
     ratio: "9/16",
@@ -511,43 +583,7 @@ window.WORKS = [
   },
 
   {
-    slug: "tennis-product-ugc", num: "28", kind: "edit",
-    name: "Product UGC cut",
-    sub: "Instagram Reels · 12 sec",
-    ratio: "9/16",
-    poster: "media/posters/tennis-product-ugc.webp",
-    file: "media/video/tennis-product-ugc.mp4",
-    embed: null,
-    tags: ["Story beats", "Call to action", "Match cuts"],
-    brief: "Store to court in twelve seconds: pick up the box, open it, use what is inside. A small story told entirely in cuts.",
-    did: [
-      "Ordered the clips as a journey rather than as a montage, so the product gets a before and an after.",
-      "Cut on the hands — each shot hands the object to the next one.",
-      "Kept one call-to-action line pinned on screen for the whole clip.",
-      "Matched the greens and the daylight across store and court so the jump does not jar."
-    ]
-  },
-
-  {
-    slug: "logo-reveal-3d", num: "29", kind: "edit",
-    name: "3D logo reveal",
-    sub: "Horizontal · 15 sec",
-    ratio: "16/9",
-    poster: "media/posters/logo-reveal-3d.webp",
-    file: "media/video/logo-reveal-3d.mp4",
-    embed: null,
-    tags: ["3D", "Lighting", "Sound design"],
-    brief: "A metal-and-neon logo build for a gaming brand: the mark assembles in the dark, the characters step in, the name lands.",
-    did: [
-      "Built the reveal in stages so each element arrives with its own beat.",
-      "Lit it with one hard key and a red rim — the material does the work, not the effects.",
-      "Timed the assembly to the sound design, with the hit landing on the finished mark.",
-      "Held the final frame long enough to be screenshotted and used as an avatar."
-    ]
-  },
-
-  {
-    slug: "journal-motion-reel", num: "30", kind: "edit",
+    slug: "journal-motion-reel", num: "32", kind: "edit",
     name: "App promo, motion only",
     sub: "Vertical · 24 sec",
     ratio: "9/16",
