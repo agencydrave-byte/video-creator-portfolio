@@ -18,48 +18,10 @@
 
 window.WORKS = [
 
-  /* ─────────────── ВЫШЕ ВСЕГО: по просьбе владельца ─────────────── */
-
-  {
-    slug: "promin-voice-panel", num: "01", kind: "edit",
-    name: "Voice on wood, motion only",
-    sub: "Vertical · 28 sec",
-    ratio: "9/16",
-    poster: "media/posters/promin-voice-panel.webp",
-    file: "media/video/promin-voice-panel.mp4",
-    embed: null,
-    tags: ["Motion design", "Typography", "Product"],
-    brief: "A promo for a laser studio that engraves a voice message onto a wooden panel, explained in four steps with no footage at all: type, a phone chat, a waveform and a laser.",
-    did: [
-      "Opened on the finished panel and one word, so the product is on screen before any explanation.",
-      "Rebuilt the messenger chat as an animated mock-up, so the viewer sees exactly what to send.",
-      "Turned the voice into a waveform and let the laser draw it onto the wood, which is the whole product in one shot.",
-      "Kept one concrete-grey ground and one green accent, and closed on the logo built by the laser."
-    ]
-  },
-
-  {
-    slug: "promin-voice-panel-footage", num: "02", kind: "edit",
-    name: "Voice on wood, footage + motion",
-    sub: "Vertical · 29 sec",
-    ratio: "9/16",
-    poster: "media/posters/promin-voice-panel-footage.webp",
-    file: "media/video/promin-voice-panel-footage.mp4",
-    embed: null,
-    tags: ["Hybrid", "Captions", "Motion design"],
-    brief: "The same engraved-voice product, cut as a hybrid: real panels in hand and on a wall, with the ordering steps rebuilt as animated phone screens in between.",
-    did: [
-      "Opened on a real panel in a real hand with a caption, so the first second feels like a recommendation and not an ad.",
-      "Cut from footage to animated chat screens on the beat, so the ordering steps are clear without a voice-over.",
-      "Zoomed into the voice messages and the engraving moment, so the details read on a phone.",
-      "Showed the finished panel on a wall and ended on the mock-up request, so the viewer sees the result before the ask."
-    ]
-  },
-
   /* ─────────────── СДЕЛАНО ЧЕРЕЗ ИИ ─────────────── */
 
   {
-    slug: "sports-drink-spot", num: "03", kind: "ai",
+    slug: "sports-drink-spot", num: "01", kind: "ai",
     name: "Sports drink spot",
     sub: "AI-generated · sport",
     ratio: "9/16",
@@ -77,7 +39,7 @@ window.WORKS = [
   },
 
   {
-    slug: "stratus-force-spot", num: "04", kind: "ai",
+    slug: "stratus-force-spot", num: "02", kind: "ai",
     name: "STRATUS FORCE teaser",
     sub: "AI-generated · brand teaser",
     ratio: "9/16",
@@ -95,7 +57,7 @@ window.WORKS = [
   },
 
   {
-    slug: "coffee-machine-spot", num: "05", kind: "ai",
+    slug: "coffee-machine-spot", num: "03", kind: "ai",
     name: "Coffee machine spot",
     sub: "AI-generated · product",
     ratio: "16/9",
@@ -113,7 +75,7 @@ window.WORKS = [
   },
 
   {
-    slug: "animated-short", num: "06", kind: "ai",
+    slug: "animated-short", num: "04", kind: "ai",
     name: "Animated short",
     sub: "AI-generated · 3D style",
     ratio: "16/9",
@@ -131,7 +93,7 @@ window.WORKS = [
   },
 
   {
-    slug: "ai-presenter-promo", num: "07", kind: "ai",
+    slug: "ai-presenter-promo", num: "05", kind: "ai",
     name: "Studio promo with a presenter",
     sub: "AI-generated · presenter",
     ratio: "16/9",
@@ -149,7 +111,7 @@ window.WORKS = [
   },
 
   {
-    slug: "burger-spot", num: "08", kind: "ai",
+    slug: "burger-spot", num: "06", kind: "ai",
     name: "Food spot: burger",
     sub: "AI-generated · food",
     ratio: "16/9",
@@ -167,7 +129,7 @@ window.WORKS = [
   },
 
   {
-    slug: "energy-drink-spot", num: "09", kind: "ai",
+    slug: "energy-drink-spot", num: "07", kind: "ai",
     name: "Energy drink spot",
     sub: "AI-generated · product",
     ratio: "16/9",
@@ -185,7 +147,7 @@ window.WORKS = [
   },
 
   {
-    slug: "snoring-spray-ad", num: "10", kind: "ai",
+    slug: "snoring-spray-ad", num: "08", kind: "ai",
     name: "Animated product ad",
     sub: "AI-generated · story ad",
     ratio: "9/16",
@@ -203,7 +165,7 @@ window.WORKS = [
   },
 
   {
-    slug: "ugc-kitchen-ad", num: "11", kind: "ai",
+    slug: "ugc-kitchen-ad", num: "09", kind: "ai",
     name: "UGC-style ad",
     sub: "AI-generated · spokesperson",
     ratio: "9/16",
@@ -221,7 +183,7 @@ window.WORKS = [
   },
 
   {
-    slug: "interior-mood", num: "12", kind: "ai",
+    slug: "interior-mood", num: "10", kind: "ai",
     name: "Interior mood piece",
     sub: "AI-generated · architecture",
     ratio: "9/16",
@@ -239,7 +201,7 @@ window.WORKS = [
   },
 
   {
-    slug: "masked-podcast", num: "13", kind: "ai",
+    slug: "masked-podcast", num: "11", kind: "ai",
     name: "Masked podcast bit",
     sub: "AI-generated · talking characters",
     ratio: "16/9",
@@ -257,7 +219,7 @@ window.WORKS = [
   },
 
   {
-    slug: "action-bus-scene", num: "14", kind: "ai",
+    slug: "action-bus-scene", num: "12", kind: "ai",
     name: "Action scene",
     sub: "AI-generated · fan edit",
     ratio: "16/9",
@@ -275,7 +237,7 @@ window.WORKS = [
   },
 
   {
-    slug: "shaver-spot", num: "15", kind: "ai",
+    slug: "shaver-spot", num: "13", kind: "ai",
     name: "Product spot: shaver",
     sub: "AI-generated · product",
     ratio: "9/16",
@@ -293,7 +255,7 @@ window.WORKS = [
   },
 
   {
-    slug: "lowrider-character", num: "16", kind: "ai",
+    slug: "lowrider-character", num: "14", kind: "ai",
     name: "Animated character",
     sub: "AI-generated · stylised",
     ratio: "9/16",
@@ -312,7 +274,7 @@ window.WORKS = [
 
 
   {
-    slug: "cinematic-stunt-scene", num: "17", kind: "ai",
+    slug: "cinematic-stunt-scene", num: "15", kind: "ai",
     name: "Cinematic scene",
     sub: "AI-generated · comedy",
     ratio: "16/9",
@@ -330,7 +292,7 @@ window.WORKS = [
   },
 
   {
-    slug: "bathroom-ugc-talk", num: "18", kind: "ai",
+    slug: "bathroom-ugc-talk", num: "16", kind: "ai",
     name: "Spokesperson cut",
     sub: "AI-generated · spokesperson",
     ratio: "9/16",
@@ -348,7 +310,7 @@ window.WORKS = [
   },
 
   {
-    slug: "car-selfie-reel", num: "19", kind: "ai",
+    slug: "car-selfie-reel", num: "17", kind: "ai",
     name: "Captioned selfie reel",
     sub: "AI-generated · spokesperson",
     ratio: "9/16",
@@ -366,7 +328,7 @@ window.WORKS = [
   },
 
   {
-    slug: "sportswear-run-reel", num: "20", kind: "ai",
+    slug: "sportswear-run-reel", num: "18", kind: "ai",
     name: "Sportswear reel",
     sub: "AI-generated · sport",
     ratio: "9/16",
@@ -384,7 +346,7 @@ window.WORKS = [
   },
 
   {
-    slug: "tennis-product-ugc", num: "21", kind: "ai",
+    slug: "tennis-product-ugc", num: "19", kind: "ai",
     name: "Product UGC cut",
     sub: "AI-generated · UGC ad",
     ratio: "9/16",
@@ -402,7 +364,7 @@ window.WORKS = [
   },
 
   {
-    slug: "logo-reveal-3d", num: "22", kind: "ai",
+    slug: "logo-reveal-3d", num: "20", kind: "ai",
     name: "3D logo reveal",
     sub: "AI-generated · brand mark",
     ratio: "16/9",
@@ -420,6 +382,42 @@ window.WORKS = [
   },
 
   /* ─────────────── МОНТАЖ ─────────────── */
+
+  {
+    slug: "promin-voice-panel", num: "21", kind: "edit",
+    name: "Voice on wood, motion only",
+    sub: "Vertical · 28 sec",
+    ratio: "9/16",
+    poster: "media/posters/promin-voice-panel.webp",
+    file: "media/video/promin-voice-panel.mp4",
+    embed: null,
+    tags: ["Motion design", "Typography", "Product"],
+    brief: "A promo for a laser studio that engraves a voice message onto a wooden panel, explained in four steps with no footage at all: type, a phone chat, a waveform and a laser.",
+    did: [
+      "Opened on the finished panel and one word, so the product is on screen before any explanation.",
+      "Rebuilt the messenger chat as an animated mock-up, so the viewer sees exactly what to send.",
+      "Turned the voice into a waveform and let the laser draw it onto the wood, which is the whole product in one shot.",
+      "Kept one concrete-grey ground and one green accent, and closed on the logo built by the laser."
+    ]
+  },
+
+  {
+    slug: "promin-voice-panel-footage", num: "22", kind: "edit",
+    name: "Voice on wood, footage + motion",
+    sub: "Vertical · 29 sec",
+    ratio: "9/16",
+    poster: "media/posters/promin-voice-panel-footage.webp",
+    file: "media/video/promin-voice-panel-footage.mp4",
+    embed: null,
+    tags: ["Hybrid", "Captions", "Motion design"],
+    brief: "The same engraved-voice product, cut as a hybrid: real panels in hand and on a wall, with the ordering steps rebuilt as animated phone screens in between.",
+    did: [
+      "Opened on a real panel in a real hand with a caption, so the first second feels like a recommendation and not an ad.",
+      "Cut from footage to animated chat screens on the beat, so the ordering steps are clear without a voice-over.",
+      "Zoomed into the voice messages and the engraving moment, so the details read on a phone.",
+      "Showed the finished panel on a wall and ended on the mock-up request, so the viewer sees the result before the ask."
+    ]
+  },
 
   {
     slug: "sunset-motivation", num: "23", kind: "edit",
