@@ -383,223 +383,7 @@ window.WORKS = [
   /* ─────────────── МОНТАЖ ─────────────── */
 
   {
-    slug: "creatine-podcast-cut", num: "21", kind: "edit",
-    name: "Podcast cut-down",
-    sub: "Instagram Reels · 35 sec",
-    ratio: "9/16",
-    poster: "media/posters/creatine-podcast-cut.webp",
-    file: "media/video/creatine-podcast-cut.mp4",
-    embed: null,
-    tags: ["Reframing", "Hook", "Captions"],
-    brief: "A long podcast reduced to the one answer worth clipping, with an opening built to stop the scroll before the talking starts.",
-    did: [
-      "Found the clip inside the episode — the claim, the reason, the turn — and cut around it.",
-      "Opened on a graphic hook so the first second promises what the clip delivers.",
-      "Reframed the horizontal footage to vertical, cutting between the angles on the beats.",
-      "Set big captions on the key words so the clip works muted in the feed."
-    ]
-  },
-
-  {
-    slug: "journal-motion-reel", num: "22", kind: "edit",
-    name: "App promo, motion only",
-    sub: "Vertical · 24 sec",
-    ratio: "9/16",
-    poster: "media/posters/journal-motion-reel.webp",
-    file: "media/video/journal-motion-reel.mp4",
-    embed: null,
-    tags: ["Motion design", "UI", "Typography"],
-    brief: "A promo for a trading journal made without a single frame of footage: interface pieces, type and numbers, animated into four claims.",
-    did: [
-      "Rebuilt the product interface as animated cards instead of filming the screen.",
-      "Gave the piece one system — dark ground, one green accent, one typeface — and kept to it.",
-      "Animated each claim in on its line and cleared the frame before the next one.",
-      "Kept every beat short enough that the viewer finishes reading exactly as it leaves."
-    ]
-  },
-
-  {
-    slug: "sunset-motivation", num: "23", kind: "edit",
-    name: "Sunset motivation reel",
-    sub: "Instagram Reels · 40 sec",
-    ratio: "9/16",
-    poster: "media/posters/sunset-motivation.webp",
-    file: "media/video/sunset-motivation.mp4",
-    embed: null,
-    tags: ["Vertical", "Captions", "Music sync"],
-    brief: "A spoken idea carried by footage that was never shot for it. The picture sets the mood, the captions carry the meaning, and the two have to land at the same moment.",
-    did: [
-      "Picked shots that match the line being spoken, not just the pretty ones.",
-      "Timed every caption change to the voice, so the viewer reads at the speed of speech.",
-      "Highlighted the key words in colour — the point survives with the sound off.",
-      "Graded the clips into one warm look and cut the music to the same beat."
-    ]
-  },
-
-  {
-    slug: "laws-of-power", num: "24", kind: "edit",
-    name: "48 Laws of Power",
-    sub: "Instagram Reels · book quote",
-    ratio: "9/16",
-    poster: "media/posters/laws-of-power.webp",
-    file: "media/video/laws-of-power.mp4",
-    embed: null,
-    tags: ["Collage", "Typography", "Short form"],
-    brief: "A quote from a book turned into eleven seconds that still feel composed rather than rushed.",
-    did: [
-      "Built the frame as a collage: tilted cards, dark background, one idea at a time.",
-      "Set the type so the quote reads in one breath, with the two load-bearing words in colour.",
-      "Moved the cards in with the beat instead of fading them.",
-      "Kept the whole thing under twelve seconds — a quote stops working if it outstays."
-    ]
-  },
-
-  {
-    slug: "talking-head-grid", num: "25", kind: "edit",
-    name: "Talking head on a grid",
-    sub: "Instagram Reels · 30 sec",
-    ratio: "9/16",
-    poster: "media/posters/talking-head-grid.webp",
-    file: "media/video/talking-head-grid.mp4",
-    embed: null,
-    tags: ["Reframing", "Captions", "Repost format"],
-    brief: "Horizontal source footage that had to live in a vertical feed without black bars and without cropping the speaker out of frame.",
-    did: [
-      "Set the speaker in a framed window over a moving grid, so the vertical space works instead of sitting empty.",
-      "Cut out the pauses and restarts — the thought runs straight through.",
-      "Added captions in the account's own style and a line pointing to the channel in the profile.",
-      "Kept the voice level even across the whole cut."
-    ]
-  },
-
-  {
-    slug: "creator-talking-head", num: "26", kind: "edit",
-    name: "Creator talking head",
-    sub: "Instagram Reels · 20 sec",
-    ratio: "9/16",
-    poster: "media/posters/creator-talking-head.webp",
-    file: "media/video/creator-talking-head.mp4",
-    embed: null,
-    tags: ["Close-up", "Captions", "Pacing"],
-    brief: "Twenty seconds built from a longer talk: one idea, no filler, close enough that the face does the work.",
-    did: [
-      "Found the single line worth a reel and cut everything that led up to it.",
-      "Hid the joins behind punch-ins so the talk reads as one take.",
-      "Put the key phrase in a highlighted caption at the moment it is said.",
-      "Framed the speaker for vertical with the eyes on the upper third."
-    ]
-  },
-
-  {
-    slug: "text-explainer", num: "27", kind: "edit",
-    name: "Text-driven explainer",
-    sub: "Vertical · 90 sec",
-    ratio: "9/16",
-    poster: "media/posters/text-explainer.webp",
-    file: "media/video/text-explainer.mp4",
-    embed: null,
-    tags: ["Typography", "Long form", "Motion"],
-    brief: "A minute and a half with no footage at all — the whole thing is type, timing and motion, and it still has to hold attention to the end.",
-    did: [
-      "Broke the script into numbered beats so the viewer always knows where they are.",
-      "Gave the piece one visual system — grid, two colours, one typeface — and never broke it.",
-      "Animated each line in on the voice, with enough air between beats to read.",
-      "Kept the longest shot short enough that the cut never stalls."
-    ]
-  },
-
-  {
-    slug: "quiet-lifestyle", num: "28", kind: "edit",
-    name: "Quiet lifestyle reel",
-    sub: "Instagram Reels · 25 sec",
-    ratio: "9/16",
-    poster: "media/posters/quiet-lifestyle.webp",
-    file: "media/video/quiet-lifestyle.mp4",
-    embed: null,
-    tags: ["Soft grade", "Ambience", "Captions"],
-    brief: "A calm, slow format where the edit has to stay invisible: cuts you notice would break the mood the footage is selling.",
-    did: [
-      "Cut on movement rather than on the beat, so nothing jumps.",
-      "Graded everything into one soft, warm palette with the highlights pulled back.",
-      "Kept the captions small and low-contrast to match the footage.",
-      "Chose music that sits under the room sound instead of covering it."
-    ]
-  },
-
-  {
-    slug: "bw-portrait", num: "29", kind: "edit",
-    name: "Black and white cut",
-    sub: "TikTok · 15 sec",
-    ratio: "9/16",
-    poster: "media/posters/bw-portrait.webp",
-    file: "media/video/bw-portrait.mp4",
-    embed: null,
-    tags: ["Mono grade", "Portrait", "Short form"],
-    brief: "Phone footage shot in a hallway, turned into something that looks deliberate.",
-    did: [
-      "Took it to black and white to lose the mixed indoor colour that gave the phone away.",
-      "Cut the clip to the moment that actually carries it and dropped the rest.",
-      "Kept the grain so it reads as a choice rather than as bad light.",
-      "Framed the portrait so the empty side of the frame is doing something."
-    ]
-  },
-
-  {
-    slug: "movie-meme", num: "30", kind: "edit",
-    name: "Movie meme cut",
-    sub: "TikTok · 20 sec",
-    ratio: "9/16",
-    poster: "media/posters/movie-meme.webp",
-    file: "media/video/movie-meme.mp4",
-    embed: null,
-    tags: ["Meme format", "Captions", "Timing"],
-    brief: "A film scene reused as a punchline. The whole job is timing: the caption has to arrive a beat before the reaction.",
-    did: [
-      "Found the exact frame where the joke lands and built the cut backwards from it.",
-      "Set the caption to appear just before the reaction, not with it.",
-      "Rounded the footage into a card so it reads as a quote, not as a rip.",
-      "Trimmed the tail the moment the laugh is over."
-    ]
-  },
-
-  {
-    slug: "trading-recap", num: "31", kind: "edit",
-    name: "Trading recap",
-    sub: "Horizontal · screen recording",
-    ratio: "16/9",
-    poster: "media/posters/trading-recap.webp",
-    file: "media/video/trading-recap.mp4",
-    embed: null,
-    tags: ["Screen capture", "Zoom-ins", "Captions"],
-    brief: "A screen recording of a chart — the hardest kind of footage to keep watchable, because nothing in the frame moves on its own.",
-    did: [
-      "Zoomed into the part of the chart being talked about instead of showing the whole screen.",
-      "Cut out every pause between thoughts so the commentary runs continuously.",
-      "Added captions, since this gets watched without sound more often than not.",
-      "Kept the interface readable at the size it will actually be viewed."
-    ]
-  },
-
-  {
-    slug: "czech-news-explainer", num: "32", kind: "edit",
-    name: "Explainer on a grid",
-    sub: "Instagram Reels · 27 sec",
-    ratio: "9/16",
-    poster: "media/posters/czech-news-explainer.webp",
-    file: "media/video/czech-news-explainer.mp4",
-    embed: null,
-    tags: ["Reframing", "Subtitles", "Inserts"],
-    brief: "A horizontal talk rebuilt for a vertical feed in Czech: the speaker in a window on a moving grid, with the thing he is talking about shown beside him.",
-    did: [
-      "Set the speaker in a framed window so the vertical space is used instead of padded.",
-      "Cut the inserts — the chart, the numbers — in exactly on the words they belong to.",
-      "Subtitled the whole thing in Czech and highlighted the load-bearing words.",
-      "Kept the channel line on screen without letting it fight the captions."
-    ]
-  },
-
-  {
-    slug: "promin-voice-panel", num: "33", kind: "edit",
+    slug: "promin-voice-panel", num: "21", kind: "edit",
     name: "Voice on wood, motion only",
     sub: "Vertical · 28 sec",
     ratio: "9/16",
@@ -617,7 +401,7 @@ window.WORKS = [
   },
 
   {
-    slug: "promin-voice-panel-footage", num: "34", kind: "edit",
+    slug: "promin-voice-panel-footage", num: "22", kind: "edit",
     name: "Voice on wood, footage + motion",
     sub: "Vertical · 29 sec",
     ratio: "9/16",
@@ -631,6 +415,222 @@ window.WORKS = [
       "Cut from footage to animated chat screens on the beat, so the ordering steps are clear without a voice-over.",
       "Zoomed into the voice messages and the engraving moment, so the details read on a phone.",
       "Showed the finished panel on a wall and ended on the mock-up request, so the viewer sees the result before the ask."
+    ]
+  },
+
+  {
+    slug: "creatine-podcast-cut", num: "23", kind: "edit",
+    name: "Podcast cut-down",
+    sub: "Instagram Reels · 35 sec",
+    ratio: "9/16",
+    poster: "media/posters/creatine-podcast-cut.webp",
+    file: "media/video/creatine-podcast-cut.mp4",
+    embed: null,
+    tags: ["Reframing", "Hook", "Captions"],
+    brief: "A long podcast reduced to the one answer worth clipping, with an opening built to stop the scroll before the talking starts.",
+    did: [
+      "Found the clip inside the episode — the claim, the reason, the turn — and cut around it.",
+      "Opened on a graphic hook so the first second promises what the clip delivers.",
+      "Reframed the horizontal footage to vertical, cutting between the angles on the beats.",
+      "Set big captions on the key words so the clip works muted in the feed."
+    ]
+  },
+
+  {
+    slug: "journal-motion-reel", num: "24", kind: "edit",
+    name: "App promo, motion only",
+    sub: "Vertical · 24 sec",
+    ratio: "9/16",
+    poster: "media/posters/journal-motion-reel.webp",
+    file: "media/video/journal-motion-reel.mp4",
+    embed: null,
+    tags: ["Motion design", "UI", "Typography"],
+    brief: "A promo for a trading journal made without a single frame of footage: interface pieces, type and numbers, animated into four claims.",
+    did: [
+      "Rebuilt the product interface as animated cards instead of filming the screen.",
+      "Gave the piece one system — dark ground, one green accent, one typeface — and kept to it.",
+      "Animated each claim in on its line and cleared the frame before the next one.",
+      "Kept every beat short enough that the viewer finishes reading exactly as it leaves."
+    ]
+  },
+
+  {
+    slug: "sunset-motivation", num: "25", kind: "edit",
+    name: "Sunset motivation reel",
+    sub: "Instagram Reels · 40 sec",
+    ratio: "9/16",
+    poster: "media/posters/sunset-motivation.webp",
+    file: "media/video/sunset-motivation.mp4",
+    embed: null,
+    tags: ["Vertical", "Captions", "Music sync"],
+    brief: "A spoken idea carried by footage that was never shot for it. The picture sets the mood, the captions carry the meaning, and the two have to land at the same moment.",
+    did: [
+      "Picked shots that match the line being spoken, not just the pretty ones.",
+      "Timed every caption change to the voice, so the viewer reads at the speed of speech.",
+      "Highlighted the key words in colour — the point survives with the sound off.",
+      "Graded the clips into one warm look and cut the music to the same beat."
+    ]
+  },
+
+  {
+    slug: "laws-of-power", num: "26", kind: "edit",
+    name: "48 Laws of Power",
+    sub: "Instagram Reels · book quote",
+    ratio: "9/16",
+    poster: "media/posters/laws-of-power.webp",
+    file: "media/video/laws-of-power.mp4",
+    embed: null,
+    tags: ["Collage", "Typography", "Short form"],
+    brief: "A quote from a book turned into eleven seconds that still feel composed rather than rushed.",
+    did: [
+      "Built the frame as a collage: tilted cards, dark background, one idea at a time.",
+      "Set the type so the quote reads in one breath, with the two load-bearing words in colour.",
+      "Moved the cards in with the beat instead of fading them.",
+      "Kept the whole thing under twelve seconds — a quote stops working if it outstays."
+    ]
+  },
+
+  {
+    slug: "talking-head-grid", num: "27", kind: "edit",
+    name: "Talking head on a grid",
+    sub: "Instagram Reels · 30 sec",
+    ratio: "9/16",
+    poster: "media/posters/talking-head-grid.webp",
+    file: "media/video/talking-head-grid.mp4",
+    embed: null,
+    tags: ["Reframing", "Captions", "Repost format"],
+    brief: "Horizontal source footage that had to live in a vertical feed without black bars and without cropping the speaker out of frame.",
+    did: [
+      "Set the speaker in a framed window over a moving grid, so the vertical space works instead of sitting empty.",
+      "Cut out the pauses and restarts — the thought runs straight through.",
+      "Added captions in the account's own style and a line pointing to the channel in the profile.",
+      "Kept the voice level even across the whole cut."
+    ]
+  },
+
+  {
+    slug: "creator-talking-head", num: "28", kind: "edit",
+    name: "Creator talking head",
+    sub: "Instagram Reels · 20 sec",
+    ratio: "9/16",
+    poster: "media/posters/creator-talking-head.webp",
+    file: "media/video/creator-talking-head.mp4",
+    embed: null,
+    tags: ["Close-up", "Captions", "Pacing"],
+    brief: "Twenty seconds built from a longer talk: one idea, no filler, close enough that the face does the work.",
+    did: [
+      "Found the single line worth a reel and cut everything that led up to it.",
+      "Hid the joins behind punch-ins so the talk reads as one take.",
+      "Put the key phrase in a highlighted caption at the moment it is said.",
+      "Framed the speaker for vertical with the eyes on the upper third."
+    ]
+  },
+
+  {
+    slug: "text-explainer", num: "29", kind: "edit",
+    name: "Text-driven explainer",
+    sub: "Vertical · 90 sec",
+    ratio: "9/16",
+    poster: "media/posters/text-explainer.webp",
+    file: "media/video/text-explainer.mp4",
+    embed: null,
+    tags: ["Typography", "Long form", "Motion"],
+    brief: "A minute and a half with no footage at all — the whole thing is type, timing and motion, and it still has to hold attention to the end.",
+    did: [
+      "Broke the script into numbered beats so the viewer always knows where they are.",
+      "Gave the piece one visual system — grid, two colours, one typeface — and never broke it.",
+      "Animated each line in on the voice, with enough air between beats to read.",
+      "Kept the longest shot short enough that the cut never stalls."
+    ]
+  },
+
+  {
+    slug: "quiet-lifestyle", num: "30", kind: "edit",
+    name: "Quiet lifestyle reel",
+    sub: "Instagram Reels · 25 sec",
+    ratio: "9/16",
+    poster: "media/posters/quiet-lifestyle.webp",
+    file: "media/video/quiet-lifestyle.mp4",
+    embed: null,
+    tags: ["Soft grade", "Ambience", "Captions"],
+    brief: "A calm, slow format where the edit has to stay invisible: cuts you notice would break the mood the footage is selling.",
+    did: [
+      "Cut on movement rather than on the beat, so nothing jumps.",
+      "Graded everything into one soft, warm palette with the highlights pulled back.",
+      "Kept the captions small and low-contrast to match the footage.",
+      "Chose music that sits under the room sound instead of covering it."
+    ]
+  },
+
+  {
+    slug: "bw-portrait", num: "31", kind: "edit",
+    name: "Black and white cut",
+    sub: "TikTok · 15 sec",
+    ratio: "9/16",
+    poster: "media/posters/bw-portrait.webp",
+    file: "media/video/bw-portrait.mp4",
+    embed: null,
+    tags: ["Mono grade", "Portrait", "Short form"],
+    brief: "Phone footage shot in a hallway, turned into something that looks deliberate.",
+    did: [
+      "Took it to black and white to lose the mixed indoor colour that gave the phone away.",
+      "Cut the clip to the moment that actually carries it and dropped the rest.",
+      "Kept the grain so it reads as a choice rather than as bad light.",
+      "Framed the portrait so the empty side of the frame is doing something."
+    ]
+  },
+
+  {
+    slug: "movie-meme", num: "32", kind: "edit",
+    name: "Movie meme cut",
+    sub: "TikTok · 20 sec",
+    ratio: "9/16",
+    poster: "media/posters/movie-meme.webp",
+    file: "media/video/movie-meme.mp4",
+    embed: null,
+    tags: ["Meme format", "Captions", "Timing"],
+    brief: "A film scene reused as a punchline. The whole job is timing: the caption has to arrive a beat before the reaction.",
+    did: [
+      "Found the exact frame where the joke lands and built the cut backwards from it.",
+      "Set the caption to appear just before the reaction, not with it.",
+      "Rounded the footage into a card so it reads as a quote, not as a rip.",
+      "Trimmed the tail the moment the laugh is over."
+    ]
+  },
+
+  {
+    slug: "trading-recap", num: "33", kind: "edit",
+    name: "Trading recap",
+    sub: "Horizontal · screen recording",
+    ratio: "16/9",
+    poster: "media/posters/trading-recap.webp",
+    file: "media/video/trading-recap.mp4",
+    embed: null,
+    tags: ["Screen capture", "Zoom-ins", "Captions"],
+    brief: "A screen recording of a chart — the hardest kind of footage to keep watchable, because nothing in the frame moves on its own.",
+    did: [
+      "Zoomed into the part of the chart being talked about instead of showing the whole screen.",
+      "Cut out every pause between thoughts so the commentary runs continuously.",
+      "Added captions, since this gets watched without sound more often than not.",
+      "Kept the interface readable at the size it will actually be viewed."
+    ]
+  },
+
+  {
+    slug: "czech-news-explainer", num: "34", kind: "edit",
+    name: "Explainer on a grid",
+    sub: "Instagram Reels · 27 sec",
+    ratio: "9/16",
+    poster: "media/posters/czech-news-explainer.webp",
+    file: "media/video/czech-news-explainer.mp4",
+    embed: null,
+    tags: ["Reframing", "Subtitles", "Inserts"],
+    brief: "A horizontal talk rebuilt for a vertical feed in Czech: the speaker in a window on a moving grid, with the thing he is talking about shown beside him.",
+    did: [
+      "Set the speaker in a framed window so the vertical space is used instead of padded.",
+      "Cut the inserts — the chart, the numbers — in exactly on the words they belong to.",
+      "Subtitled the whole thing in Czech and highlighted the load-bearing words.",
+      "Kept the channel line on screen without letting it fight the captions."
     ]
   },
 ];
