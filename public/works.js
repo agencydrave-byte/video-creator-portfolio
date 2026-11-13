@@ -384,43 +384,7 @@ window.WORKS = [
   /* ─────────────── МОНТАЖ ─────────────── */
 
   {
-    slug: "promin-voice-panel", num: "21", kind: "edit",
-    name: "Voice on wood, motion only",
-    sub: "Vertical · 28 sec",
-    ratio: "9/16",
-    poster: "media/posters/promin-voice-panel.webp",
-    file: "media/video/promin-voice-panel.mp4",
-    embed: null,
-    tags: ["Motion design", "Typography", "Product"],
-    brief: "A promo for a laser studio that engraves a voice message onto a wooden panel, explained in four steps with no footage at all: type, a phone chat, a waveform and a laser.",
-    did: [
-      "Opened on the finished panel and one word, so the product is on screen before any explanation.",
-      "Rebuilt the messenger chat as an animated mock-up, so the viewer sees exactly what to send.",
-      "Turned the voice into a waveform and let the laser draw it onto the wood, which is the whole product in one shot.",
-      "Kept one concrete-grey ground and one green accent, and closed on the logo built by the laser."
-    ]
-  },
-
-  {
-    slug: "promin-voice-panel-footage", num: "22", kind: "edit",
-    name: "Voice on wood, footage + motion",
-    sub: "Vertical · 29 sec",
-    ratio: "9/16",
-    poster: "media/posters/promin-voice-panel-footage.webp",
-    file: "media/video/promin-voice-panel-footage.mp4",
-    embed: null,
-    tags: ["Hybrid", "Captions", "Motion design"],
-    brief: "The same engraved-voice product, cut as a hybrid: real panels in hand and on a wall, with the ordering steps rebuilt as animated phone screens in between.",
-    did: [
-      "Opened on a real panel in a real hand with a caption, so the first second feels like a recommendation and not an ad.",
-      "Cut from footage to animated chat screens on the beat, so the ordering steps are clear without a voice-over.",
-      "Zoomed into the voice messages and the engraving moment, so the details read on a phone.",
-      "Showed the finished panel on a wall and ended on the mock-up request, so the viewer sees the result before the ask."
-    ]
-  },
-
-  {
-    slug: "sunset-motivation", num: "23", kind: "edit",
+    slug: "sunset-motivation", num: "21", kind: "edit",
     name: "Sunset motivation reel",
     sub: "Instagram Reels · 40 sec",
     ratio: "9/16",
@@ -438,7 +402,7 @@ window.WORKS = [
   },
 
   {
-    slug: "laws-of-power", num: "24", kind: "edit",
+    slug: "laws-of-power", num: "22", kind: "edit",
     name: "48 Laws of Power",
     sub: "Instagram Reels · book quote",
     ratio: "9/16",
@@ -456,7 +420,7 @@ window.WORKS = [
   },
 
   {
-    slug: "talking-head-grid", num: "25", kind: "edit",
+    slug: "talking-head-grid", num: "23", kind: "edit",
     name: "Talking head on a grid",
     sub: "Instagram Reels · 30 sec",
     ratio: "9/16",
@@ -474,7 +438,7 @@ window.WORKS = [
   },
 
   {
-    slug: "creator-talking-head", num: "26", kind: "edit",
+    slug: "creator-talking-head", num: "24", kind: "edit",
     name: "Creator talking head",
     sub: "Instagram Reels · 20 sec",
     ratio: "9/16",
@@ -492,7 +456,7 @@ window.WORKS = [
   },
 
   {
-    slug: "text-explainer", num: "27", kind: "edit",
+    slug: "text-explainer", num: "25", kind: "edit",
     name: "Text-driven explainer",
     sub: "Vertical · 90 sec",
     ratio: "9/16",
@@ -510,7 +474,7 @@ window.WORKS = [
   },
 
   {
-    slug: "quiet-lifestyle", num: "28", kind: "edit",
+    slug: "quiet-lifestyle", num: "26", kind: "edit",
     name: "Quiet lifestyle reel",
     sub: "Instagram Reels · 25 sec",
     ratio: "9/16",
@@ -528,7 +492,7 @@ window.WORKS = [
   },
 
   {
-    slug: "bw-portrait", num: "29", kind: "edit",
+    slug: "bw-portrait", num: "27", kind: "edit",
     name: "Black and white cut",
     sub: "TikTok · 15 sec",
     ratio: "9/16",
@@ -546,7 +510,7 @@ window.WORKS = [
   },
 
   {
-    slug: "movie-meme", num: "30", kind: "edit",
+    slug: "movie-meme", num: "28", kind: "edit",
     name: "Movie meme cut",
     sub: "TikTok · 20 sec",
     ratio: "9/16",
@@ -564,7 +528,7 @@ window.WORKS = [
   },
 
   {
-    slug: "trading-recap", num: "31", kind: "edit",
+    slug: "trading-recap", num: "29", kind: "edit",
     name: "Trading recap",
     sub: "Horizontal · screen recording",
     ratio: "16/9",
@@ -583,7 +547,7 @@ window.WORKS = [
 
 
   {
-    slug: "czech-news-explainer", num: "32", kind: "edit",
+    slug: "czech-news-explainer", num: "30", kind: "edit",
     name: "Explainer on a grid",
     sub: "Instagram Reels · 27 sec",
     ratio: "9/16",
@@ -601,7 +565,7 @@ window.WORKS = [
   },
 
   {
-    slug: "creatine-podcast-cut", num: "33", kind: "edit",
+    slug: "creatine-podcast-cut", num: "31", kind: "edit",
     name: "Podcast cut-down",
     sub: "Instagram Reels · 35 sec",
     ratio: "9/16",
@@ -619,7 +583,7 @@ window.WORKS = [
   },
 
   {
-    slug: "journal-motion-reel", num: "34", kind: "edit",
+    slug: "journal-motion-reel", num: "32", kind: "edit",
     name: "App promo, motion only",
     sub: "Vertical · 24 sec",
     ratio: "9/16",
@@ -633,6 +597,42 @@ window.WORKS = [
       "Gave the piece one system — dark ground, one green accent, one typeface — and kept to it.",
       "Animated each claim in on its line and cleared the frame before the next one.",
       "Kept every beat short enough that the viewer finishes reading exactly as it leaves."
+    ]
+  },
+
+  {
+    slug: "promin-voice-panel", num: "33", kind: "edit",
+    name: "Voice on wood, motion only",
+    sub: "Vertical · 28 sec",
+    ratio: "9/16",
+    poster: "media/posters/promin-voice-panel.webp",
+    file: "media/video/promin-voice-panel.mp4",
+    embed: null,
+    tags: ["Motion design", "Typography", "Product"],
+    brief: "A promo for a laser studio that engraves a voice message onto a wooden panel, explained in four steps with no footage at all: type, a phone chat, a waveform and a laser.",
+    did: [
+      "Opened on the finished panel and one word, so the product is on screen before any explanation.",
+      "Rebuilt the messenger chat as an animated mock-up, so the viewer sees exactly what to send.",
+      "Turned the voice into a waveform and let the laser draw it onto the wood, which is the whole product in one shot.",
+      "Kept one concrete-grey ground and one green accent, and closed on the logo built by the laser."
+    ]
+  },
+
+  {
+    slug: "promin-voice-panel-footage", num: "34", kind: "edit",
+    name: "Voice on wood, footage + motion",
+    sub: "Vertical · 29 sec",
+    ratio: "9/16",
+    poster: "media/posters/promin-voice-panel-footage.webp",
+    file: "media/video/promin-voice-panel-footage.mp4",
+    embed: null,
+    tags: ["Hybrid", "Captions", "Motion design"],
+    brief: "The same engraved-voice product, cut as a hybrid: real panels in hand and on a wall, with the ordering steps rebuilt as animated phone screens in between.",
+    did: [
+      "Opened on a real panel in a real hand with a caption, so the first second feels like a recommendation and not an ad.",
+      "Cut from footage to animated chat screens on the beat, so the ordering steps are clear without a voice-over.",
+      "Zoomed into the voice messages and the engraving moment, so the details read on a phone.",
+      "Showed the finished panel on a wall and ended on the mock-up request, so the viewer sees the result before the ask."
     ]
   },
 ];
