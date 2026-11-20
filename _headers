@@ -1,0 +1,13 @@
+# Заголовки для статики. Файл читает Cloudflare, когда отдаёт public/.
+
+# Страница и список работ правятся часто, пока сайт наполняется.
+/
+  Cache-Control: no-store
+/index.html
+  Cache-Control: no-store
+/works.js
+  Cache-Control: no-store
+
+# Видео и постеры большие и меняются редко — их можно держать в кеше сутки.
+/media/*
+  Cache-Control: public, max-age=86400
