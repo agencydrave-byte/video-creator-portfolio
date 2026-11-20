@@ -97,12 +97,20 @@ a{color:inherit;text-decoration:none}
   .hero-note{text-align:justify;margin-left:auto}
 }
 
+/* Портрет 702×1280 → ширина = высота × 0.548. Ограничение по высоте экрана:
+   на ноутбуках 720–768 px имя целиком в первом экране, в альбомном телефоне
+   портрет не уходит за край. */
 .hero-figure{
   position:relative;z-index:1;
-  width:min(80vw,22rem);
-  order:-1;
+  width:min(80vw,22rem,calc((100vh - 9rem) * 0.548));
+  width:min(80vw,22rem,calc((100svh - 9rem) * 0.548));
+  order:-2;
 }
-@media (min-width:900px){.hero-figure{order:0;width:min(34vw,25rem)}}
+@media (min-width:900px){.hero-figure{
+  order:0;
+  width:min(34vw,25rem,calc((100vh - 9rem) * 0.548));
+  width:min(34vw,25rem,calc((100svh - 9rem) * 0.548));
+}}
 .hero-figure img{
   width:100%;height:auto;
   -webkit-mask-image:linear-gradient(180deg,#000 78%,transparent 100%);
@@ -129,6 +137,21 @@ a{color:inherit;text-decoration:none}
   line-height:0.9;letter-spacing:-0.03em;
   color:var(--ink);
   text-shadow:0 0.5rem 2.5rem rgba(0,0,0,0.55);
+}
+/* Телефон и планшет: в одну колонку имя по низу блока ложилось на абзац.
+   Здесь оно идёт сразу под портретом и заходит на его тающий низ — как на ноутбуке. */
+@media (max-width:899px){
+  .hero-name{
+    position:relative;left:auto;bottom:auto;transform:none;
+    order:-1;
+    margin-top:calc(-1.5rem - clamp(4.5rem,min(20vw,14vh),7rem));
+    margin-top:calc(-1.5rem - clamp(4.5rem,min(20vw,14svh),7rem));
+  }
+  /* альбомный телефон: кегль ещё и от высоты, иначе имя шире портрета и под краем */
+  .hero-name-lg{
+    font-size:clamp(3.2rem,min(11vw,13vh),8rem);
+    font-size:clamp(3.2rem,min(11vw,13svh),8rem);
+  }
 }
 
 .hero-tools{
@@ -324,10 +347,15 @@ a{color:inherit;text-decoration:none}
 }
 .stage video{
   display:block;width:auto;height:auto;
-  max-width:100%;max-height:min(78vh,42rem);
+  max-width:100%;max-height:min(78vh,42rem);max-height:min(78svh,42rem);
   background:#000;
 }
-.stage--wide video{max-height:min(60vh,28rem)}
+.stage--wide video{max-height:min(60vh,28rem);max-height:min(60svh,28rem)}
+/* Телефон: крестик был поверх видео и уезжал при прокрутке описания.
+   Теперь своя строка над плеером и прилипает к верху окна. */
+@media (max-width:899px){
+  .view-close{position:sticky;top:0.75rem;right:auto;margin:0 0 0.75rem auto}
+}
 /* встроенный проигрыватель (YouTube/Vimeo) размера не знает — задаём кадр сами */
 .stage--embed{aspect-ratio:16/9;width:100%}
 .stage--embed.stage--vert{aspect-ratio:9/16;max-width:min(22rem,100%);margin:0 auto}
@@ -376,6 +404,18 @@ a{color:inherit;text-decoration:none}
   border-top:1px solid var(--line-soft);margin-top:clamp(2.5rem,6vw,4rem);padding-top:1.5rem;
   display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:space-between;
   font-size:0.6875rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-dim);
+}
+
+/* ═══════════ ТАЧ-ЭКРАНЫ ═══════════ */
+/* палец: зона нажатия не меньше 44 px */
+@media (pointer:coarse){
+  .pill{min-height:2.75rem}
+  .fbtn{min-height:2.75rem;padding-left:1.1rem;padding-right:1.1rem}
+  .view-close{width:2.75rem;height:2.75rem}
+}
+/* без мыши hover «залипает» после тапа — подъём не нужен */
+@media (hover:none){
+  .pill:hover,.work:hover,.social a:hover{transform:none}
 }
 
 /* ═══════════ ПОЯВЛЕНИЕ ═══════════ */
